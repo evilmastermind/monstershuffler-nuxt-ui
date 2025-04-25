@@ -1,0 +1,97 @@
+@font-face {
+  font-family: OpenSans;
+  src: url("@/assets/fonts/OpenSans-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url("@/assets/fonts/OpenSans-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url("@/assets/fonts/OpenSans-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url("@/assets/fonts/OpenSans-Semibold.woff2") format("woff2");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url("@/assets/fonts/OpenSans-Italic.woff2") format("woff2");
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: ScalaSansOffc;
+  src: url("@/assets/fonts/ScalaSansOffc.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: ScalaSansOffc;
+  src: url("@/assets/fonts/ScalaSansOffc-Italic.woff") format("woff");
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: ScalaSansOffc;
+  src: url("@/assets/fonts/ScalaSansOffc-Bold.woff") format("woff");
+  font-weight: bold;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: ScalaSansOffc;
+  src: url("@/assets/fonts/ScalaSansOffc-BoldItalic.woff") format("woff");
+  font-style: italic;
+  font-weight: bold;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: MrsEavesSmallCaps;
+  src: url("@/assets/fonts/MyMrsEavesSC.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Bookman;
+  src: url("@/assets/fonts/Bookman.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: LibreBaskerville;
+  src: url("@/assets/fonts/LibreBaskerville-Regular.woff2") format("woff2");
+}
+
+/* @font-face {
+  font-family: AngloText;
+  src: url("@/assets/fonts/AngloText.woff2") format("woff2");
+} */
+/* @font-face {
+  font-family: AusweisHollow;
+  src: url("@/assets/fonts/AusweisHollow.ttf");
+} */
+
+/* @font-face {
+  font-family: AdLib;
+  src: url("@/assets/fonts/AdLib.woff2") format("woff2");
+  font-display: swap;
+} */
+
+.text-max {
+  max-width: 700px;
+  margin: 0 auto;
+}

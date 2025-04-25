@@ -1,0 +1,71 @@
+.rainbow {
+  animation: rainbow 0.5s infinite;
+}
+@keyframes rainbow {
+  0% {
+    color: red;
+  }
+  17% {
+    color: purple;
+  }
+  34% {
+    color: blue;
+  }
+  51% {
+    color: green;
+  }
+  68% {
+    color: yellow;
+  }
+  85% {
+    color: orange;
+  }
+  100% {
+    color: red;
+  }
+}
+/* .rainbow-background {
+  background: radial-gradient(circle, red, orange, yellow, green, blue, indigo, violet);
+  animation: rainbow-background 0.5s linear infinite;
+}
+@keyframes rainbow-background {
+  0% {
+    background: radial-gradient(circle, orange, yellow, green, blue, indigo, violet, red);
+  }
+  14.3% {
+    background: radial-gradient(circle, red, orange, yellow, green, blue, indigo, violet);
+  }
+  28.6% {
+    background: radial-gradient(circle, violet, red, orange, yellow, green, blue, indigo);
+  }
+  42.9% {
+    background: radial-gradient(circle, indigo, violet, red, orange, yellow, green, blue);
+  }
+  57.2% {
+    background: radial-gradient(circle, blue, indigo, violet, red, orange, yellow, green);
+  }
+  71.5% {
+    background: radial-gradient(circle, green, blue, indigo, violet, red, orange, yellow);
+  }
+  85.8% {
+    background: radial-gradient(circle, yellow, green, blue, indigo, violet, red, orange);
+  }
+  100% {
+    background: radial-gradient(circle, orange, yellow, green, blue, indigo, violet, red);
+  }
+} */
+
+.poop {
+  animation: poop 0.5s infinite;
+}
+@keyframes poop {
+  0% {
+    color: #452709;
+  }
+  50% {
+    color: #d9ab4a;
+  }
+  100% {
+    color: #452709;
+  }
+}
