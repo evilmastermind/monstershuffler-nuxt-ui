@@ -1,10 +1,7 @@
 <template>
   <div>
-    <!-- <h3 class="content text-text-evil">
-      {{ $t("generator.pickOne") }}
-    </h3> -->
-    <div class="flex flex-col-reverse gap-6 w-full mt-2">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="flex flex-col-reverse gap-6 mt-2">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <template v-for="(npc, index) in session" :key="`${index}${npc.id}`">
           <Transition name="fade-scroll-slow" appear>
             <MonsterCard

@@ -24,8 +24,9 @@
         </div>
         <div class="flex items-center gap-4">
           <NavBarSocialLinks class="hidden md:inline-flex" />
-          <NavBarSettings />
+
           <NavBarUser />
+          <NavBarSettings />
           <NavBarBurger class="inline-flex md:hidden" />
         </div>
       </div>
