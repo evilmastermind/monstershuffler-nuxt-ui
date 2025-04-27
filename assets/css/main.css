@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
+@import "./animations.css";
 @import "./fonts.css";
 @import "./transitions.css";
 @import "./utility.css";
@@ -13,7 +14,7 @@
   --color-brand-200: hsl(355, 57%, 86%);
   --color-brand-300: hsl(355, 49%, 76%);
   --color-brand-400: hsl(355, 45%, 66%);
-  --color-brand-500: hsl(355, 100%, 24%);
+  --color-brand-500: hsl(355, 43%, 56%);
   --color-brand-600: hsl(355, 60%, 39%);
   --color-brand-700: hsl(355, 100%, 24%);
   --color-brand-800: hsl(355, 100%, 17%);
@@ -82,17 +83,17 @@
   --color-backgroudlight-900: hsl(46, 22%, 55%);
   --color-backgroudlight-1000: hsl(46, 22%, 50%); */
 
-  --color-satin-linen-50: #f8f7f2;
-  --color-satin-linen-100: #e4dfcd;
-  --color-satin-linen-200: #d5cdb2;
-  --color-satin-linen-300: #c0b289;
-  --color-satin-linen-400: #b19d6e;
-  --color-satin-linen-500: #a4885c;
-  --color-satin-linen-600: #90714f;
-  --color-satin-linen-700: #795a44;
-  --color-satin-linen-800: #644a3c;
-  --color-satin-linen-900: #543e33;
-  --color-satin-linen-950: #2e211a;
+  --color-satin-linen-50: hsl(46, 30%, 97%);
+  --color-satin-linen-100: hsl(46, 30%, 92%);
+  --color-satin-linen-200: hsl(46, 29%, 87%);
+  --color-satin-linen-300: hsl(46, 30%, 82%);
+  --color-satin-linen-400: hsl(46, 30%, 77%);
+  --color-satin-linen-500: hsl(46, 28%, 50%);
+  --color-satin-linen-600: hsl(46, 0%, 25%);
+  --color-satin-linen-700: hsl(46, 0%, 20%);
+  --color-satin-linen-800: hsl(46, 0%, 15%);
+  --color-satin-linen-900: hsl(46, 0%, 10%);
+  --color-satin-linen-950: hsl(46, 0%, 5%);
 
   /* --color-merino-50: #faf8f2;
   --color-merino-100: #f6f3e9;
@@ -108,20 +109,38 @@
 }
 
 :root {
-  --ui-primary: var(--ui-color-primary-700);
+  --ui-primary: var(--ui-color-primary-800);
+  --ui-bg: var(--ui-color-neutral-100);
+  --ui-bg-muted: var(--ui-color-neutral-200);
+  --ui-bg-elevated: var(--ui-color-neutral-200);
+  --ui-bg-accented: var(--ui-color-neutral-300);
+  --ui-bg-inverted: var(--ui-color-neutral-900);
   --ui-al-good: var(--ui-color-al-good-800);
   --ui-al-evil: var(--ui-color-al-evil-800);
   --ui-al-neutral: var(--ui-color-al-neutral-800);
   --ui-bg-al-good: var(--ui-color-al-good-50);
   --ui-bg-al-evil: var(--ui-color-al-evil-50);
   --ui-bg-al-neutral: var(--ui-color-al-neutral-50);
+  --ui-text-primary: var(--ui-color-primary-900);
   --ui-text-al-good: var(--ui-color-al-good-900);
   --ui-text-al-evil: var(--ui-color-al-evil-900);
   --ui-text-al-neutral: var(--ui-color-al-neutral-900);
+
+  --ui-text-dimmed: var(--color-zinc-400);
+  --ui-text-muted: var(--color-zinc-500);
+  --ui-text-toned: var(--color-zinc-600);
+  --ui-text: var(--color-zinc-700);
+  --ui-text-highlighted: var(--color-zinc-900);
+  --ui-text-inverted: var(--color-white);
 }
 
 .dark {
   --ui-primary: var(--ui-color-primary-400);
+  --ui-bg: var(--ui-color-neutral-900);
+  --ui-bg-muted: var(--ui-color-neutral-800);
+  --ui-bg-elevated: var(--ui-color-neutral-800);
+  --ui-bg-accented: var(--ui-color-neutral-700);
+  --ui-bg-inverted: var(--ui-color-neutral-100);
   --ui-al-good: var(--ui-color-al-good-300);
   --ui-al-evil: var(--ui-color-al-evil-300);
   --ui-al-neutral: var(--ui-color-al-neutral-300);
@@ -131,8 +150,19 @@
   --ui-text-al-good: var(--ui-color-al-good-300);
   --ui-text-al-evil: var(--ui-color-al-evil-300);
   --ui-text-al-neutral: var(--ui-color-al-neutral-300);
+
+  --ui-text-dimmed: var(--color-zinc-500);
+  --ui-text-muted: var(--color-zinc-400);
+  --ui-text-toned: var(--color-zinc-300);
+  --ui-text: var(--color-zinc-200);
+  --ui-text-highlighted: var(--color-white);
+  --ui-text-inverted: var(--color-zinc-900);
 }
 
 button[type="button"] {
   cursor: pointer;
+}
+
+.small-caps {
+  font-variant: small-caps;
 }

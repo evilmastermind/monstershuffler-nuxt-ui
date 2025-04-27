@@ -1,10 +1,10 @@
 <template>
   <div>
-    <GeneratorPageBackground />
+    <!-- <GeneratorPageBackground /> -->
     <div class="relative">
       <NavBarHeight />
       <GeneratorPageBar />
-      <MSContentWidth>
+      <UContainer>
         <GeneratorBits v-if="characters.length" />
         <Transition name="fade-quick" appear>
           <GeneratorNPC v-if="currentCharacterIndex > -1" class="mt-4" />
@@ -37,7 +37,7 @@
             </div>
           </div>
         </div>
-      </MSContentWidth>
+      </UContainer>
     </div>
   </div>
 </template>
@@ -96,13 +96,7 @@ watch(
 onBeforeMount(async () => {
   isLoading.value = generator.racesAndVariants.length === 0;
   // Retrieve the generator data
-  const status = await generator.getGeneratorData();
-  if (status !== 200) {
-    alert.value = {
-      type: "danger",
-      message: t("error.notFoundExtended"),
-    };
-  }
+  await generator.getGeneratorData();
   const retrievedSettings =
     await user.getSettings<NPCGeneratorSettings>("npcgenerator");
   if (retrievedSettings) {

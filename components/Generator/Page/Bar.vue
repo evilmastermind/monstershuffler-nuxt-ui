@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-(--ui-bg-muted) border-b border-(--ui-bg-accented)">
-    <MSContentWidth>
+  <div class="border-b border-muted">
+    <UContainer>
       <div class="top-bar items-center whitespace-nowrap h-12 gap-4">
         <!-- Info section -->
         <div class="top-bar-info flex justify-between items-center">
@@ -69,7 +69,6 @@
           <USwitch
             v-model="settings.isFormMode"
             :label="settings.isFormMode ? 'Form' : 'Prompt'"
-            :size="mdAndDown ? 'sm' : 'md'"
           />
         </div>
       </div>
@@ -80,11 +79,13 @@
         class="md:hidden mb-4"
         @close="isFormOpen = false"
       />
-    </MSContentWidth>
+    </UContainer>
   </div>
 </template>
 
 <script setup lang="ts">
+import { UContainer } from "#components";
+
 const isFormOpen = ref(false);
 
 const p = defineProps({
@@ -98,7 +99,6 @@ const p = defineProps({
   },
 });
 
-const { mdAndDown } = useScreen();
 const generator = useGeneratorStore();
 const editor = useMonsterEditorStore();
 

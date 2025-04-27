@@ -1,11 +1,11 @@
 <template>
   <div class="navbar-link-container">
     <NuxtLink
-      class="hover:text-(--ui-primary) text-sm leading-none"
+      class="hover:text-primary text-sm leading-none"
       :class="
         currentRoute === `${route}___${locale}`
-          ? 'current-route text-(--ui-primary)'
-          : 'text-(--ui-text-toned)'
+          ? 'current-route text-primary'
+          : 'text-toned'
       "
       :to="localePath({ name: route })"
     >

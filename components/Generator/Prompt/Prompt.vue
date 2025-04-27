@@ -42,7 +42,7 @@
       <s
         v-for="word in promptOptions.wordsNotFound"
         :key="word"
-        class="bg-(--ui-primary) text-(--ui-bg) rounded-full px-1"
+        class="word-not-found bg-primary text-inverted rounded-sm px-1"
       >
         {{ word }}
       </s>
@@ -242,3 +242,26 @@ onMounted(() => {
   // promptElement.value?.focus();
 });
 </script>
+<style scoped>
+.word-not-found {
+  animation: disappear 3s forwards;
+}
+@keyframes disappear {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  5% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  95% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+}
+</style>

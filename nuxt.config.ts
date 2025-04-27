@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
-  ssr: false,
+  // ssr: false,
   devServer: { port: 3001 },
   modules: [
     "@nuxt/eslint",
@@ -19,6 +19,9 @@ export default defineNuxtConfig({
         dir: "./assets/icons",
       },
     ],
+    // serverBundle: {
+    //   collections: ["lucide"],
+    // },
   },
   i18n: {
     locales: [
@@ -47,6 +50,22 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       apiUrl: process.env.API_URL,
+    },
+  },
+
+  ui: {
+    theme: {
+      colors: [
+        "primary",
+        "secondary",
+        "al-good",
+        "al-neutral",
+        "al-evil",
+        "info",
+        "success",
+        "warning",
+        "error",
+      ],
     },
   },
 });

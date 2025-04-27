@@ -1,6 +1,6 @@
 <template>
   <span
-    class="font-serif text-[0.9rem] font-bold tracking-[0.05rem] truncate text-(--ui-primary)"
+    class="font-serif text-[0.9rem] font-bold tracking-[0.05rem] truncate text-primary"
   >
     <slot />
   </span>

@@ -1,6 +1,6 @@
 <template>
   <h1
-    class="gradient-title font-serif font-extrabold text-4xl md:text-6xl tracking-tighter leading-none"
+    class="text-primary font-serif font-extrabold text-4xl md:text-6xl tracking-tighter leading-none"
   >
     <slot />
   </h1>

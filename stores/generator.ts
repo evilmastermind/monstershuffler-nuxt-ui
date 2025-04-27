@@ -117,41 +117,31 @@ export const useGeneratorStore = defineStore("generator", () => {
       });
       return parseResponse<PostFourRandomNpcsResponse>(response);
     } catch (error) {
-      const parsedError = parseError<PostFourRandomNpcsResponse>(error);
-      if (parsedError.status === 429) {
-        toast.add({
-          description: t("error.tooManyRequests"),
-          color: "error",
-        });
-      } else {
-        toast.add({
-          description: t("error.couldntRetrieveData"),
-          color: "error",
-        });
-      }
-      return parsedError;
+      return notifyCommonErrors(parseError<PostFourRandomNpcsResponse>(error));
     }
   }
 
-  async function getGeneratorData(): Promise<number> {
+  async function getGeneratorData(): Promise<
+    ApiResponse<GetGeneratorDataResponse>
+  > {
     try {
-      const data: GetGeneratorDataResponse = await $fetch(
+      const response = await $fetch.raw<GetGeneratorDataResponse>(
         `${api}/npcs/generator-data`,
       );
       racesAndVariants.value = prepareObjectOrVariantList(
-        data.races || [],
+        response._data?.races || [],
         "primaryRaceId",
         "primaryRacevariantId",
       );
       triggerRef(racesAndVariants);
       classesAndVariants.value = prepareObjectOrVariantList(
-        data.classes || [],
+        response._data?.classes || [],
         "classId",
         "classvariantId",
       );
       triggerRef(classesAndVariants);
-      backgrounds.value = data.backgrounds || [];
-      data.backgrounds.forEach((background) => {
+      backgrounds.value = response._data?.backgrounds || [];
+      response._data?.backgrounds.forEach((background) => {
         keywords.value.push({
           word: background.name.toLowerCase(),
           type: "backgroundId",
@@ -160,9 +150,9 @@ export const useGeneratorStore = defineStore("generator", () => {
       });
       triggerRef(backgrounds);
       triggerRef(keywords);
-      return 200;
+      return parseResponse<GetGeneratorDataResponse>(response);
     } catch (error) {
-      return parseError(error).status;
+      return notifyCommonErrors(parseError<GetGeneratorDataResponse>(error));
     }
   }
 
@@ -518,6 +508,21 @@ export const useGeneratorStore = defineStore("generator", () => {
       characters: characters.value as GeneratorCharacter[],
     };
     user.setSettings<NPCGeneratorSettings>("npcgenerator", newSettings);
+  }
+
+  function notifyCommonErrors<T>(error: ApiResponse<T>) {
+    if (error.status === 429) {
+      toast.add({
+        description: t("error.tooManyRequests"),
+        color: "error",
+      });
+    } else {
+      toast.add({
+        description: t("error.couldntRetrieveData"),
+        color: "error",
+      });
+    }
+    return error;
   }
 
   return {

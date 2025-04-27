@@ -1,6 +1,5 @@
 <template>
   <div class="layout">
-    <div class="background" />
     <NavBar />
     <main>
       <slot />
@@ -13,11 +12,4 @@ const user = useUserStore();
 user.getGeneralSettings();
 </script>
 
-<style scoped>
-.background {
-  position: absolute;
-  z-index: -3;
-  min-width: 100%;
-  min-height: 100%;
-}
-</style>
+<style scoped></style>

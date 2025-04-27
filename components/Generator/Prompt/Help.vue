@@ -8,12 +8,12 @@
       :aria-label="$t('generator.promptHelp')"
     />
     <template #content>
-      <div class="text-sm text-left max-w-[350px] p-4">
+      <div class="text-sm text-left max-w-[350px] p-6">
         <TH4>Prompt mode keywords:</TH4>
-        <p class="content">
+        <TP class="mt-2">
           e.g.
           <i>"evil male drow innkeeper rogue cr 6"</i>
-        </p>
+        </TP>
         <ul class="list-disc list-inside break-normal py-2">
           <li>
             <b>any* race</b> or variant:

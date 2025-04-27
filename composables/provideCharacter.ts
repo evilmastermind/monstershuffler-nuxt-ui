@@ -1,4 +1,3 @@
-import { stat } from "fs";
 import type {
   GeneratorCharacter,
   Character,
@@ -7,7 +6,7 @@ import type {
 } from "@/types";
 
 export function useProvideCharacter(
-  generatorCharacter: Ref<GeneratorCharacter>
+  generatorCharacter: Ref<GeneratorCharacter>,
 ) {
   const character = ref<Character>();
   const statistics = ref<Statistics>();
@@ -17,11 +16,11 @@ export function useProvideCharacter(
     const alignment =
       generatorCharacter.value.object?.statistics?.alignment?.string || "";
     if (alignment.includes("Good")) {
-      return "text-text-good fill-background-good border-good decoration-good";
+      return "text-al-good fill-(--ui-al-good) border-(--ui-al-good) decoration-(--ui-al-good)";
     } else if (alignment.includes("Evil")) {
-      return "text-text-evil fill-background-evil border-text-evil decoration-evil";
+      return "text-al-evil fill-(--ui-al-evil) border--(--ui-al-evil) decoration-(--ui-al-evil)";
     } else {
-      return "text-text-neutral fill-background-neutral border-neutral decoration-neutral";
+      return "text-al-neutral fill-(--ui-al-neutral) border-(--ui-al-neutral) decoration-(--ui-al-neutral)";
     }
   });
 
@@ -58,19 +57,19 @@ export function useProvideCharacter(
       generatorCharacter.value.key - generatorCharacter.value.key;
     // count words in actions
     wordsCount += getActionsWordsCount(
-      generatorCharacter.value.object?.statistics?.traits || []
+      generatorCharacter.value.object?.statistics?.traits || [],
     );
     wordsCount += getActionsWordsCount(
-      generatorCharacter.value.object?.statistics?.actions || []
+      generatorCharacter.value.object?.statistics?.actions || [],
     );
     wordsCount += getActionsWordsCount(
-      generatorCharacter.value.object?.statistics?.bonusActions || []
+      generatorCharacter.value.object?.statistics?.bonusActions || [],
     );
     wordsCount += getActionsWordsCount(
-      generatorCharacter.value.object?.statistics?.reactions || []
+      generatorCharacter.value.object?.statistics?.reactions || [],
     );
     wordsCount += getActionsWordsCount(
-      generatorCharacter.value.object?.statistics?.legendaryActions || []
+      generatorCharacter.value.object?.statistics?.legendaryActions || [],
     );
     return wordsCount;
   });
@@ -101,7 +100,7 @@ export function useProvideCharacter(
         ? markRaw(generatorCharacter.value.object.statistics)
         : undefined;
     },
-    { immediate: true }
+    { immediate: true },
   );
 
   provide("character", character);

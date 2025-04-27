@@ -16,6 +16,6 @@ const colorMode = useColorMode();
 </script>
 <style scoped>
 .logo-shadow {
-  filter: drop-shadow(0 0 0.6rem #ffffff33);
+  filter: drop-shadow(0 0 0.6rem #ffffff22);
 }
 </style>

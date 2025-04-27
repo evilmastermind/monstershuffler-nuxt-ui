@@ -76,6 +76,16 @@
         :aria-label="$t('generator.form.class')"
       />
     </UFormField>
+    <div class="flex gap-4 flex-wrap">
+      <UCheckbox
+        v-model="settings.options.addVoice"
+        :label="$t('generator.form.voice')"
+      />
+      <UCheckbox
+        v-model="settings.options.includeBodyType"
+        :label="$t('generator.form.includeBodyType')"
+      />
+    </div>
   </form>
 </template>
 
