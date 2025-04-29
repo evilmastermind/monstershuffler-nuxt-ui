@@ -1,44 +1,49 @@
 <template>
   <div>
-    <!-- <GeneratorPageBackground /> -->
-    <div class="relative">
-      <NavBarHeight />
-      <GeneratorPageBar />
-      <UContainer>
-        <GeneratorBits v-if="characters.length" />
-        <Transition name="fade-quick" appear>
-          <GeneratorNPC v-if="currentCharacterIndex > -1" class="mt-4" />
-        </Transition>
-        <div
-          v-show="currentCharacterIndex === -1"
-          key="3"
-          class="session-container"
-        >
-          <div class="mt-4 md:mt-7">
-            <div
-              v-if="settings.isFormMode"
-              class="hidden md:block float-left w-[300px] md:mr-6 mb-9"
-            >
-              <GeneratorForm />
-              <UButton
-                block
-                class="mt-5"
-                color="primary"
-                :label="$t('generator.form.generate')"
-                trailing-icon="i-ms-random"
-                :loading="isButtonLoading"
-                :disabled="isButtonLoading"
-                @click="generateNpcsThrottle"
-              />
-            </div>
-            <div class="npcs">
-              <GeneratorPageIntro v-if="isIntroShown" class="mt-24" />
-              <GeneratorCards v-else />
+    <NavBarHeight />
+    <Transition name="fade-quick" mode="out-in">
+      <UProgress v-if="isLoading" size="sm" />
+      <div v-else class="relative">
+        <GeneratorPageBar />
+        <UContainer>
+          <GeneratorBits v-if="characters.length" />
+          <Transition name="fade-quick" appear>
+            <GeneratorNPC v-if="currentCharacterIndex > -1" class="mt-4" />
+          </Transition>
+          <div
+            v-show="currentCharacterIndex === -1"
+            key="3"
+            class="session-container"
+          >
+            <div class="mt-4 md:mt-7">
+              <div
+                v-if="settings.isFormMode"
+                class="hidden md:block float-left w-[300px] md:mr-6 mb-9"
+              >
+                <GeneratorForm />
+                <UButton
+                  block
+                  class="mt-5"
+                  color="primary"
+                  :label="$t('generator.form.generate')"
+                  trailing-icon="i-ms-random"
+                  :loading="isButtonLoading"
+                  :disabled="isButtonLoading"
+                  @click="generateNpcsThrottle"
+                />
+              </div>
+              <div class="npcs">
+                <GeneratorPageIntro v-if="isIntroShown" class="mt-24" />
+                <GeneratorCards v-else />
+              </div>
             </div>
           </div>
-        </div>
-      </UContainer>
-    </div>
+        </UContainer>
+      </div>
+    </Transition>
+    <MSFixedTools>
+      <DiceHistory />
+    </MSFixedTools>
   </div>
 </template>
 
