@@ -5,12 +5,12 @@
         <!-- Info section -->
         <div class="top-bar-info flex justify-between items-center">
           <!-- Breadcrumbs / Back button -->
-          <div v-if="isSheetOpen" class="truncate inline-block">
+          <div v-if="isSheetOpen" class="flex items-center truncate">
             <UButton
               class="mr-4 md:mr-6"
               variant="ghost"
-              color="primary"
-              icon="i-ms-arrow-left"
+              color="neutral"
+              icon="i-xxx-arrow-left"
               :aria-label="$t('back')"
               @click="closeSheet"
             />
@@ -33,7 +33,7 @@
             color="neutral"
             variant="ghost"
             :aria-label="$t('generator.options')"
-            icon="i-ms-cog"
+            icon="i-xxx-cog"
             @click="isFormOpen = !isFormOpen"
           />
           <!-- Prompt help -->

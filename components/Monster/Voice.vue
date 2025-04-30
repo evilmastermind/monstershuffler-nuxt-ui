@@ -1,28 +1,31 @@
 <template>
-  <UTooltip :text="t('monsterCard.playVoice')">
-    <button
-      class="cursor-pointer hide-from-exports pr-1"
-      variant="ghost"
-      :aria-label="t('monsterCard.playVoice')"
-      @click.stop="toggleAudio"
-    >
-      <UIcon class="text-muted hover:text-primary" :name="audioIcon" />
-    </button>
-  </UTooltip>
-  <audio
-    ref="audio"
-    :src="`/voices/${voice.filename}.mp3`"
-    type="audio/mpeg"
-    @ended="audioIcon = PAUSE"
-  />
+  <div class="relative inline-block w-6 h-4 pr-2">
+    <UTooltip :text="t('monsterCard.playVoice')">
+      <UButton
+        class="absolute text-muted bottom-[-45%] left-[-15%] cursor-pointer hide-from-exports"
+        variant="ghost"
+        color="neutral"
+        size="xs"
+        :aria-label="t('monsterCard.playVoice')"
+        :icon="audioIcon"
+        @click.stop="toggleAudio"
+      />
+    </UTooltip>
+    <audio
+      ref="audio"
+      :src="`/voices/${voice.filename}.mp3`"
+      type="audio/mpeg"
+      @ended="audioIcon = PAUSE"
+    />
+  </div>
   <span>{{ voiceString }}</span>
 </template>
 
 <script setup lang="ts">
 const { t } = useI18n();
 
-const PLAY = "i-ms-volume-high";
-const PAUSE = "i-ms-volume-off";
+const PLAY = "i-xxx-volume-high";
+const PAUSE = "i-xxx-volume-off";
 
 type Voice = {
   person: string;

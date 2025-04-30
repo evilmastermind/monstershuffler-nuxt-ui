@@ -6,18 +6,20 @@
       <UTooltip :text="$t('dice.clear')">
         <UButton
           :aria-label="$t('dice.clear')"
+          size="sm"
           color="neutral"
           variant="ghost"
-          icon="i-ms-trash"
+          icon="i-xxx-trash"
           @click="rolls.clear()"
         />
       </UTooltip>
       <UTooltip :text="$t('dice.close')">
         <UButton
           :aria-label="$t('dice.close')"
+          size="sm"
           color="neutral"
           variant="ghost"
-          icon="i-ms-close"
+          icon="i-xxx-close"
           @click="emit('close')"
         />
       </UTooltip>

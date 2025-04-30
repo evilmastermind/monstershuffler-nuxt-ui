@@ -447,23 +447,25 @@ export const useGeneratorStore = defineStore("generator", () => {
     currentCharacterIndex.value = -1;
   }
 
-  async function getNpc(
-    uuid: string,
-    hook: number | undefined,
-  ): Promise<number> {
+  type GetNpcResponse = NpcDetails & { hasBackstory: boolean };
+  async function getNpc(uuid: string, hook: number | undefined) {
     try {
       const url =
         hook === undefined
           ? `${api}/npcs/${uuid}`
           : `${api}/npcs/${uuid}/${hook}`;
-      const data: NpcDetails & { hasBackstory: boolean } = await $fetch(url);
+      const response = await $fetch.raw<GetNpcResponse>(url);
+      const data = response._data;
+      if (!data) {
+        throw new Error("No data received");
+      }
       if (!data.object.statistics) {
         createStats(data.object);
       }
       pushNewCharacter(data, true, data.hasBackstory ? hook : undefined);
-      return 200;
+      return parseResponse<GetNpcResponse>(response);
     } catch (error) {
-      return parseError(error).status;
+      return notifyCommonErrors(parseError<GetNpcResponse>(error));
     }
   }
 
@@ -511,17 +513,68 @@ export const useGeneratorStore = defineStore("generator", () => {
   }
 
   function notifyCommonErrors<T>(error: ApiResponse<T>) {
-    if (error.status === 429) {
-      toast.add({
-        description: t("error.tooManyRequests"),
-        color: "error",
-      });
-    } else {
-      toast.add({
-        description: t("error.couldntRetrieveData"),
-        color: "error",
-      });
+    const status = error.status;
+    switch (status) {
+      case 400:
+        toast.add({
+          description: t("error.badRequest"),
+          color: "error",
+        });
+        break;
+      case 401:
+        toast.add({
+          description: t("error.unauthorized"),
+          color: "error",
+        });
+        break;
+      case 403:
+        toast.add({
+          description: t("error.forbidden"),
+          color: "error",
+        });
+        break;
+      case 404:
+        toast.add({
+          description: t("error.notFound"),
+          color: "error",
+        });
+        break;
+      case 429:
+        toast.add({
+          description: t("error.tooManyRequests"),
+          color: "error",
+        });
+        break;
+      case 500:
+        toast.add({
+          description: t("error.internalServerError"),
+          color: "error",
+        });
+        break;
+      case 503:
+        toast.add({
+          description: t("error.serviceUnavailable"),
+          color: "error",
+        });
+        break;
+      default:
+        toast.add({
+          description: t("error.unknownError"),
+          color: "error",
+        });
+        break;
     }
+    // if (error.status === 429) {
+    //   toast.add({
+    //     description: t("error.tooManyRequests"),
+    //     color: "error",
+    //   });
+    // } else {
+    //   toast.add({
+    //     description: t("error.couldntRetrieveData"),
+    //     color: "error",
+    //   });
+    // }
     return error;
   }
 

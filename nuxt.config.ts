@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
-  // ssr: false,
+  ssr: false,
   devServer: { port: 3001 },
   modules: [
     "@nuxt/eslint",
@@ -15,13 +15,10 @@ export default defineNuxtConfig({
   icon: {
     customCollections: [
       {
-        prefix: "ms",
+        prefix: "xxx",
         dir: "./assets/icons",
       },
     ],
-    // serverBundle: {
-    //   collections: ["lucide"],
-    // },
   },
   i18n: {
     locales: [
@@ -33,6 +30,9 @@ export default defineNuxtConfig({
     defaultLocale: "en",
     compilation: {
       strictMessage: false,
+    },
+    bundle: {
+      optimizeTranslationDirective: false,
     },
   },
 

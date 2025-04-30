@@ -4,7 +4,7 @@
       <UButton
         variant="ghost"
         color="neutral"
-        icon="i-ms-cog"
+        icon="i-xxx-cog"
         size="lg"
         :aria-label="$t('navbar.menu.settings')"
       />

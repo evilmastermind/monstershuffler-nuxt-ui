@@ -3,7 +3,7 @@
     <UButton
       variant="ghost"
       color="neutral"
-      icon="i-ms-question-mark"
+      icon="i-xxx-question-mark"
       size="sm"
       :aria-label="$t('generator.promptHelp')"
     />

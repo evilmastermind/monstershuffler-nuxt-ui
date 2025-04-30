@@ -6,9 +6,14 @@
       <div v-else class="relative">
         <GeneratorPageBar />
         <UContainer>
-          <GeneratorBits v-if="characters.length" />
+          <GeneratorBits v-if="characters.length" class="mt-4" />
           <Transition name="fade-quick" appear>
-            <GeneratorNPC v-if="currentCharacterIndex > -1" class="mt-4" />
+            <GeneratorNPC
+              v-if="currentCharacterIndex > -1"
+              class="mt-4"
+              @loading="isLoading = true"
+              @loaded="isLoading = false"
+            />
           </Transition>
           <div
             v-show="currentCharacterIndex === -1"
@@ -24,9 +29,8 @@
                 <UButton
                   block
                   class="mt-5"
-                  color="primary"
                   :label="$t('generator.form.generate')"
-                  trailing-icon="i-ms-random"
+                  trailing-icon="i-xxx-random"
                   :loading="isButtonLoading"
                   :disabled="isButtonLoading"
                   @click="generateNpcsThrottle"
@@ -133,16 +137,10 @@ onBeforeMount(async () => {
   const uuid = route.params.uuid as string | undefined;
   const hook = route.params.hook as string | undefined;
   if (uuid) {
-    const npcStatus = await generator.getNpc(
+    await generator.getNpc(
       uuid,
       hook !== undefined ? parseInt(hook) : undefined,
     );
-    if (npcStatus !== 200) {
-      alert.value = {
-        type: "danger",
-        message: t("error.couldntRetrieveData"),
-      };
-    }
   }
   isLoading.value = false;
 });

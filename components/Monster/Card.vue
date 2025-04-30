@@ -1,15 +1,17 @@
 <template>
   <class
-    class="rounded-lg bg-muted/20 ring ring-default divide-y divide-default p-6"
+    class="rounded-md bg-default ring ring-accented hover:shadow hover:ring-primary/30 divide-y divide-default p-6"
   >
     <div class="relative h-full" :class="selectable ? 'selectable' : ''">
-      <div class="absolute top-[-1rem] right-[-1rem] pb-1">
+      <div class="absolute flex gap-1 top-[-1rem] right-[-1rem]">
         <UTooltip :text="$t('copyToClipboard')">
           <UButton
             v-if="selectable"
-            class="text-dimmed hover:text-toned p-1"
+            class="text-dimmed/50 hover:text-toned p-1"
+            size="sm"
             variant="ghost"
-            icon="i-ms-clipboard"
+            color="neutral"
+            icon="i-xxx-clipboard"
             :aria-label="$t('copyToClipboard')"
             @click.stop="copyToClipboard"
           />
@@ -17,15 +19,17 @@
         <UTooltip :text="$t('pin')">
           <UButton
             v-if="selectable"
-            class="text-dimmed hover:text-toned p-1"
+            class="text-dimmed/50 hover:text-toned p-1"
+            size="sm"
+            color="neutral"
             variant="ghost"
-            icon="i-ms-pin"
+            icon="i-xxx-pin"
             :aria-label="$t('pin')"
             @click.stop="pinCharacter"
           />
         </UTooltip>
       </div>
-      <div class="flex flex-col justify-between w-full h-full">
+      <div class="flex flex-col justify-between w-full h-full pt-2">
         <MonsterRoleplay
           hide-physical-appearance
           class="font-[ScalaSansOffc]"

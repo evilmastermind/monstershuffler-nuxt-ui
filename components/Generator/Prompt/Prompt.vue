@@ -8,7 +8,7 @@
       v-model="prompt"
       class="w-full"
       :placeholder="$t(`generator.prompt.placeholder.${placeholder}`)"
-      loading-icon="i-ms-loading"
+      loading-icon="i-xxx-loading"
       @keyup.enter="generateNpcsThrottle"
       @input="resetWordsNotFound"
     >
@@ -20,14 +20,14 @@
             color="primary"
             size="sm"
             @click="generateNpcsThrottle"
-            icon="i-ms-random"
+            icon="i-xxx-random"
           />
           <UButton
             v-else
             variant="ghost"
             color="primary"
             size="sm"
-            icon="i-ms-loading"
+            icon="i-xxx-loading"
           />
         </div>
       </template>

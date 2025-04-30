@@ -1,6 +1,6 @@
 <template>
   <UDropdownMenu v-model:open="open" :items>
-    <UButton variant="soft" color="dark" icon="i-ms-burger" size="lg" />
+    <UButton variant="soft" color="dark" icon="i-xxx-burger" size="lg" />
   </UDropdownMenu>
 </template>
 
@@ -14,29 +14,29 @@ const items = [
   [
     {
       label: t("navbar.menu.home"),
-      icon: "i-ms-home",
+      icon: "i-xxx-home",
       to: localePath({ name: "index" }),
     },
     {
       label: t("navbar.menu.npcGenerator"),
-      icon: "i-ms-random",
+      icon: "i-xxx-random",
       to: localePath({ name: "monsters-generator" }),
     },
     {
       label: t("navbar.menu.editors"),
-      icon: "i-ms-editor",
+      icon: "i-xxx-editor",
       to: localePath({ name: "monsters-editors" }),
     },
   ],
   [
     {
-      icon: "i-ms-reddit",
+      icon: "i-xxx-reddit",
       label: "Reddit",
       to: "https://reddit.com/r/monstershuffler",
       target: "_blank",
     },
     {
-      icon: "i-ms-github",
+      icon: "i-xxx-github",
       label: "GitHub",
       to: "https://github.com/evilmastermind/monstershuffler",
       target: "_blank",

@@ -1,25 +1,26 @@
 <template>
-  <span
-    class="dotted"
+  <TDotted
     @mouseover="handleMouseOver"
     @mouseleave="isVisible = false"
     @click.stop="handleClick"
   >
     {{ word }}
-  </span>
+  </TDotted>
   <div
     v-if="isVisible"
     class="tooltip-container"
     :style="{ top: `${y - 2}px`, left: `${left}px`, width: `${width}px` }"
   >
-    <UCard class="shadow-xl">
+    <div
+      class="absolute bottom-0 w-full ring ring-accented rounded-md p-4 sm:p-5 bg-default not-italic shadow-xl"
+    >
       <h4 class="text-left font-bold">{{ word }}:</h4>
       <p v-if="retrievedDescription !== null" class="content">
         {{ retrievedDescription }}
       </p>
       <LoadingDots v-else :size="6" />
       <MSClose v-if="hasCloseButton" @click.stop="isVisible = false" />
-    </UCard>
+    </div>
   </div>
 </template>
 

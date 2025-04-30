@@ -121,19 +121,19 @@ export function parseError<T>(error: unknown): ApiResponse<T> {
   if (error instanceof Error) {
     return {
       ok: false,
-      status: error.message.includes("404") ? 404 : 500,
+      status: error.message.includes("404") ? 404 : 503,
       error: error.message,
     };
   } else if (error instanceof FetchError) {
     return {
       ok: false,
-      status: error.status || 500,
+      status: error.status || 503,
       error: error.message,
     };
   } else {
     return {
       ok: false,
-      status: 500,
+      status: 503,
       error: "Unknown error",
     };
   }

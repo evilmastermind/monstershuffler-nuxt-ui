@@ -38,8 +38,7 @@
           $t("monsterCard.personality")
         }}</MonsterRoleplayDt>
         <dd>
-          <span
-            class="border-b border-dotted border-(--ui-text-muted) cursor-help"
+          <TDotted
             @mouseover.stop="showTraitDescription = true"
             @mouseleave.stop="showTraitDescription = false"
           >
@@ -48,7 +47,7 @@
               :description="character.character.trait.description"
               source="traits"
             />
-          </span>
+          </TDotted>
         </dd>
       </template>
       <template v-if="character.character.height">

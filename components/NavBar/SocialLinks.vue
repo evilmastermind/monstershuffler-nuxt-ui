@@ -6,7 +6,7 @@
         variant="ghost"
         color="neutral"
         size="lg"
-        icon="i-ms-reddit"
+        icon="i-xxx-reddit"
         target="_blank"
         square
         rel="noopener noreferrer"
@@ -18,7 +18,7 @@
         variant="ghost"
         color="neutral"
         size="lg"
-        icon="i-ms-github"
+        icon="i-xxx-github"
         target="_blank"
         square
         rel="noopener noreferrer"

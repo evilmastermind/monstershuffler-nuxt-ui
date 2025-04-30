@@ -2,7 +2,7 @@
   <ClientOnly>
     <div class="grid grid-cols-3 gap-1">
       <UButton
-        icon="i-ms-sun"
+        icon="i-xxx-sun"
         color="neutral"
         size="sm"
         :variant="colorMode.value === 'light' ? 'soft' : 'outline'"
@@ -11,7 +11,7 @@
         {{ $t("navbar.settings.theme.light") }}
       </UButton>
       <UButton
-        icon="i-ms-moon"
+        icon="i-xxx-moon"
         color="neutral"
         :variant="colorMode.value === 'dark' ? 'soft' : 'outline'"
         size="sm"
@@ -20,7 +20,7 @@
         {{ $t("navbar.settings.theme.dark") }}
       </UButton>
       <UButton
-        icon="i-ms-pc"
+        icon="i-xxx-pc"
         color="neutral"
         size="sm"
         :variant="colorMode.value === 'system' ? 'soft' : 'outline'"
