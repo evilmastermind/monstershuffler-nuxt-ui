@@ -1,6 +1,14 @@
 <template>
   <UDropdownMenu v-model:open="open" :items>
-    <UButton variant="soft" color="dark" icon="i-xxx-burger" size="lg" />
+    <UTooltip :text="$t('navbar.menuTitle')">
+      <UButton
+        variant="soft"
+        color="neutral"
+        icon="i-xxx-burger"
+        size="lg"
+        :aria-label="$t('navbar.menuTitle')"
+      />
+    </UTooltip>
   </UDropdownMenu>
 </template>
 
