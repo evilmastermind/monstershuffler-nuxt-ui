@@ -1,14 +1,10 @@
 <template>
   <UDropdownMenu v-model:open="open" :items>
-    <UTooltip :text="$t('navbar.menuTitle')">
-      <UButton
-        variant="soft"
-        color="neutral"
-        icon="i-xxx-burger"
-        size="lg"
-        :aria-label="$t('navbar.menuTitle')"
-      />
-    </UTooltip>
+    <MSIconButton
+      icon="i-xxx-burger"
+      size="lg"
+      :label="$t('navbar.menuTitle')"
+    />
   </UDropdownMenu>
 </template>
 

@@ -1,14 +1,10 @@
 <template>
   <UPopover v-model:open="open" :items>
-    <UTooltip :text="$t('navbar.menu.settings')">
-      <UButton
-        variant="ghost"
-        color="neutral"
-        icon="i-xxx-cog"
-        size="lg"
-        :aria-label="$t('navbar.menu.settings')"
-      />
-    </UTooltip>
+    <MSIconButton
+      icon="i-xxx-cog"
+      :label="$t('navbar.menu.settings')"
+      size="lg"
+    />
     <template #content>
       <div class="flex flex-col gap-3 p-4">
         <UFormField :label="$t('navbar.settings.statBlockStyle')" size="xs">

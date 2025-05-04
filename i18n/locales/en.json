@@ -465,7 +465,7 @@
     "Typically": "Typically"
   },
   "navbar": {
-    "menuTitle": "Menu:",
+    "menuTitle": "Menu",
     "login": "Login",
     "register": "Register",
     "logout": "Logout",
@@ -664,6 +664,9 @@
   "theme": "Theme",
   "rename": "Rename",
   "pin": "Pin",
+  "guide": "Guide",
+  "zoomIn": "Zoom in",
+  "zoomOut": "Zoom out",
   "placeholder": "Placeholder",
   "loading": "Loading..."
 }

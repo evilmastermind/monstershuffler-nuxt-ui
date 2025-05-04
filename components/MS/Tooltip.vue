@@ -18,7 +18,7 @@
       <p v-if="retrievedDescription !== null" class="content">
         {{ retrievedDescription }}
       </p>
-      <LoadingDots v-else :size="6" />
+      <MSLoadingDots v-else :size="6" />
       <MSClose v-if="hasCloseButton" @click.stop="isVisible = false" />
     </div>
   </div>

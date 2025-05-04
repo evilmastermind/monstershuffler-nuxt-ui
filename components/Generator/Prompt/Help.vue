@@ -1,11 +1,8 @@
 <template>
-  <UPopover v-model:open="open">
-    <UButton
-      variant="ghost"
-      color="neutral"
+  <UPopover>
+    <MSIconButton
       icon="i-xxx-question-mark"
-      size="sm"
-      :aria-label="$t('generator.promptHelp')"
+      :label="$t('generator.promptHelp')"
     />
     <template #content>
       <div class="text-sm text-left max-w-[350px] p-6">
@@ -50,14 +47,6 @@
   </UPopover>
 </template>
 
-<script setup lang="ts">
-const open = ref(false);
-
-const items = [
-  {
-    slot: "dropdown",
-  },
-];
-</script>
+<script setup lang="ts"></script>
 
 <style scoped></style>

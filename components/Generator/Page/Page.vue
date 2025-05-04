@@ -1,12 +1,12 @@
 <template>
   <div>
-    <NavBarHeight />
     <Transition name="fade-quick" mode="out-in">
-      <UProgress v-if="isLoading" size="sm" />
-      <div v-else class="relative">
+      <!-- <UProgress v-if="isLoading" size="sm" /> -->
+      <div class="relative">
         <GeneratorPageBar />
+
+        <GeneratorBits v-if="characters.length" class="mt-4" />
         <UContainer>
-          <GeneratorBits v-if="characters.length" class="mt-4" />
           <Transition name="fade-quick" appear>
             <GeneratorNPC
               v-if="currentCharacterIndex > -1"
@@ -15,31 +15,27 @@
               @loaded="isLoading = false"
             />
           </Transition>
-          <div
-            v-show="currentCharacterIndex === -1"
-            key="3"
-            class="session-container"
-          >
-            <div class="mt-4 md:mt-7">
-              <div
-                v-if="settings.isFormMode"
-                class="hidden md:block float-left w-[300px] md:mr-6 mb-9"
-              >
-                <GeneratorForm />
-                <UButton
-                  block
-                  class="mt-5"
-                  :label="$t('generator.form.generate')"
-                  trailing-icon="i-xxx-random"
-                  :loading="isButtonLoading"
-                  :disabled="isButtonLoading"
-                  @click="generateNpcsThrottle"
-                />
-              </div>
-              <div class="npcs">
-                <GeneratorPageIntro v-if="isIntroShown" class="mt-24" />
-                <GeneratorCards v-else />
-              </div>
+        </UContainer>
+        <UContainer v-show="currentCharacterIndex === -1" key="3">
+          <div class="mt-4 md:mt-7">
+            <div
+              v-if="settings.isFormMode"
+              class="hidden md:block float-left w-[300px] md:mr-6 mb-9"
+            >
+              <GeneratorForm />
+              <UButton
+                block
+                class="mt-5"
+                :label="$t('generator.form.generate')"
+                trailing-icon="i-xxx-random"
+                :loading="isButtonLoading"
+                :disabled="isButtonLoading"
+                @click="generateNpcsThrottle"
+              />
+            </div>
+            <div class="">
+              <GeneratorPageIntro v-if="isIntroShown" class="pt-12 md:pt-24" />
+              <GeneratorCards v-else />
             </div>
           </div>
         </UContainer>
@@ -68,7 +64,7 @@ const { session, characters, currentCharacterIndex, saveTrigger, settings } =
   storeToRefs(generator);
 
 const isIntroShown = ref(true);
-const isLoading = ref(true);
+const isLoading = ref(false);
 const isButtonLoading = ref(false);
 const alert = ref<AlertMessage | null>(null);
 

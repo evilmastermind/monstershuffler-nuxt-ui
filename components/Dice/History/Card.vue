@@ -31,7 +31,7 @@
         <b class="text-xs">{{ monster.name || $t("dice.you") }}</b>
         <div class="flex flex-col p-2 gap-1 rounded bg-default">
           <div v-for="roll in monster.rolls" :key="roll.totalResult">
-            <p class="leading-[1em]">
+            <p class="leading-none">
               <button @click="rolls.rollDice(roll.roll, monster.name)">
                 <b class="font-bold underline decoration-[1px]">
                   {{ rollName(roll) }}

@@ -27,6 +27,7 @@
     "@nuxtjs/i18n": "9.5.3",
     "@nuxtjs/seo": "3.0.3",
     "@pinia/nuxt": "0.11.0",
+    "html-to-image": "^1.11.13",
     "monstershuffler-shared": "git+https://github.com/evilmastermind/monstershuffler-shared#main",
     "nuxt": "^3.16.2",
     "pinia": "^3.0.2",

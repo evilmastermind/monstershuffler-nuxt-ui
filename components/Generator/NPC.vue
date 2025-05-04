@@ -5,18 +5,18 @@
       :key="characters[currentCharacterIndex].id"
     >
       <Transition name="fade-quick" appear>
-        <LazyMonsterSheetTools
+        <LazyMonsterSheetToolBar
           :generator-character="
             characters[currentCharacterIndex] as GeneratorCharacter
           "
-          class="mt-5 sm:mt-0 px-0 sm:px-4"
+          class="mt-5 sm:mt-0 px-0"
         />
       </Transition>
       <Transition name="fade-quick" appear>
         <div
           v-show="isLoaded"
           ref="sheet"
-          class="overflow-hidden shadow sm:rounded sm:mx-4 mt-0 sm:mt-2"
+          class="overflow-hidden shadow sm:rounded mt-0 sm:mt-2"
         >
           <LazyMonsterSheet
             :key="currentCharacterIndex"

@@ -1,5 +1,5 @@
 <template>
-  <MSNote class="rounded shadow">
+  <MSNote class="shadow">
     <component
       :is="layout"
       v-show="isLoaded"
@@ -18,7 +18,7 @@
       </template>
       <template #card>
         <MonsterSheetCard>
-          <MonsterRoleplayStats />
+          <MonsterRoleplay />
         </MonsterSheetCard>
       </template>
     </component>

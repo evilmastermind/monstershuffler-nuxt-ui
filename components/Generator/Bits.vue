@@ -1,9 +1,9 @@
 <template>
-  <div ref="bits" class="relative flex flex-wrap gap-1">
+  <UContainer ref="bits" class="relative flex flex-wrap gap-1">
     <TransitionGroup name="fade-row">
       <div
         :key="-1"
-        class="min-h-[3.75rem] flex flex-col justify-evenly items-center rounded-full leading-none bg-elevated overflow-hidden mr-1 gap-0"
+        class="flex flex-col justify-evenly items-center rounded-full bg-elevated overflow-hidden mr-1"
       >
         <UTooltip :text="$t('generator.deleteAll')">
           <UButton
@@ -45,7 +45,7 @@
       class="absolute top-full z-[9990] mt-1 drop-shadow-2xl"
       :style="{ top: `100%`, left: `${left}px`, width: `${width}px` }"
     />
-  </div>
+  </UContainer>
 </template>
 
 <script setup lang="ts">

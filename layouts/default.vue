@@ -1,9 +1,12 @@
 <template>
-  <div class="layout">
-    <NavBar />
-    <main>
-      <slot />
-    </main>
+  <div>
+    <div class="min-h-svh">
+      <NavBar />
+      <main>
+        <slot />
+      </main>
+    </div>
+    <MSFooter />
   </div>
 </template>
 

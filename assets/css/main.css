@@ -95,6 +95,21 @@
   --color-satin-linen-900: hsl(46, 0%, 10%);
   --color-satin-linen-950: hsl(46, 0%, 5%);
 
+  --color-bipolar-0: hsl(0, 0%, 100%);
+  --color-bipolar-50: hsl(46, 47%, 97%);
+  --color-bipolar-100: hsl(46, 41%, 94%);
+  --color-bipolar-150: hsl(46, 36%, 92%);
+  --color-bipolar-200: hsl(46, 36%, 90%);
+  --color-bipolar-300: hsl(46, 30%, 85%);
+  --color-bipolar-400: hsl(46, 25%, 80%);
+  --color-bipolar-500: hsl(46, 22%, 75%);
+  --color-bipolar-600: hsl(0, 0%, 20%);
+  --color-bipolar-700: hsl(0, 0%, 15%);
+  --color-bipolar-800: hsl(0, 0%, 15%);
+  --color-bipolar-900: hsl(0, 0%, 10%);
+  --color-bipolar-950: hsl(0, 0%, 5%);
+  --color-bipolar-1000: hsl(0, 0%, 0%);
+
   /* --color-merino-50: #faf8f2;
   --color-merino-100: #f6f3e9;
   --color-merino-200: #e6dcc2;

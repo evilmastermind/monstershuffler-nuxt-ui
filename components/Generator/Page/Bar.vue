@@ -102,14 +102,13 @@ const p = defineProps({
 const generator = useGeneratorStore();
 const editor = useMonsterEditorStore();
 
-const { currentEditorMode } = storeToRefs(editor);
 const { currentCharacterIndex, characters, settings } = storeToRefs(generator);
 
 const isSheetOpen = computed(() => currentCharacterIndex.value > -1);
 
 function closeSheet() {
   currentCharacterIndex.value = -1;
-  currentEditorMode.value = "";
+  editor.closeEditors();
 }
 </script>
 <style scoped>

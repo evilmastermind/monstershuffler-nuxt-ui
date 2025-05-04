@@ -1,7 +1,7 @@
 <template>
   <!-- <div v-if="!token" class="buttons-flex">
-    <MSButton text="Login" color="dark" to="login" />
-    <MSButton text="Register" color="primary" to="registration" />
+    <UButton text="Login" variant="outline" color="neutral" to="login" />
+    <UButton text="Register" color="neutral" to="registration" />
   </div>
   <NuxtLink
     v-else-if="me"

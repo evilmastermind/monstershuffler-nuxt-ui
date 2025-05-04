@@ -2,7 +2,7 @@
   <div>
     <Transition name="fade" appear mode="out-in">
       <div
-        class="relative h-full flex flex-col leading-[1em] cursor-pointer text-inverted shadow rounded select-none"
+        class="relative h-full flex flex-col leading-none cursor-pointer text-inverted shadow rounded select-none"
         :class="[moral()]"
         :style="{
           transitionDelay: `${0.02 * index}s`,

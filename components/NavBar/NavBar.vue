@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full fixed h-[60px] flex items-center border-b border-muted backdrop-blur-xs z-20"
+    class="w-full h-[60px] flex items-center border-b border-muted bg-linear-to-b from-(--ui-bg) to-(--ui-bg-muted)/70 backdrop-blur-xs z-20"
   >
     <UContainer>
       <div class="flex justify-between items-center">

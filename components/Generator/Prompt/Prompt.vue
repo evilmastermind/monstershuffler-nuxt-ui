@@ -3,35 +3,31 @@
     <label for="npc-prompt" class="sr-only">
       {{ $t("generator.prompt.label") }}
     </label>
-    <UInput
-      id="npc-prompt"
-      v-model="prompt"
-      class="w-full"
-      :placeholder="$t(`generator.prompt.placeholder.${placeholder}`)"
-      loading-icon="i-xxx-loading"
-      @keyup.enter="generateNpcsThrottle"
-      @input="resetWordsNotFound"
-    >
-      <template #trailing>
-        <div class="flex items-center gap-1">
-          <UButton
-            v-if="!isLoading"
-            variant="ghost"
-            color="primary"
-            size="sm"
-            @click="generateNpcsThrottle"
-            icon="i-xxx-random"
-          />
-          <UButton
-            v-else
-            variant="ghost"
-            color="primary"
-            size="sm"
-            icon="i-xxx-loading"
-          />
-        </div>
-      </template>
-    </UInput>
+    <UButtonGroup class="w-full">
+      <UInput
+        id="npc-prompt"
+        class="w-full"
+        v-model="prompt"
+        color="neutral"
+        variant="outline"
+        :placeholder="$t(`generator.prompt.placeholder.${placeholder}`)"
+        loading-icon="i-xxx-loading"
+        @keyup.enter="generateNpcsThrottle"
+        @input="resetWordsNotFound"
+      >
+        <template #trailing>
+          <UKbd value="enter" />
+        </template>
+      </UInput>
+      <UButton
+        color="neutral"
+        variant="subtle"
+        size="sm"
+        :loading="isLoading"
+        @click="generateNpcsThrottle"
+        icon="i-xxx-random"
+      />
+    </UButtonGroup>
     <p
       v-if="promptOptions.wordsNotFound?.length"
       class="absolute z-10 text-xs tracking-wider flex items-center flex-wrap gap-1"
