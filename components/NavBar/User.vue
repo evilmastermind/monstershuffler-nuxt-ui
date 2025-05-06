@@ -1,7 +1,12 @@
 <template>
-  <!-- <div v-if="!token" class="buttons-flex">
+  <div v-if="!token" class="flex gap-2">
     <UButton text="Login" variant="outline" color="neutral" to="login" />
-    <UButton text="Register" color="neutral" to="registration" />
+    <UButton
+      text="Register"
+      variant="solid"
+      color="neutral"
+      to="registration"
+    />
   </div>
   <NuxtLink
     v-else-if="me"
@@ -17,7 +22,7 @@
         backgroundImage: `url(${me.avatar || '/images/avatar.jpg'})`,
       }"
     ></div>
-  </NuxtLink> -->
+  </NuxtLink>
   <div></div>
 </template>
 <script setup lang="ts">

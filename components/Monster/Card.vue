@@ -30,10 +30,7 @@
         </UTooltip>
       </div>
       <div class="flex flex-col justify-between w-full h-full pt-2">
-        <MonsterRoleplay
-          hide-physical-appearance
-          class="font-[ScalaSansOffc]"
-        />
+        <MonsterRoleplay hide-physical-appearance />
         <UButton
           block
           v-if="selectable"

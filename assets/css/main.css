@@ -95,21 +95,6 @@
   --color-satin-linen-900: hsl(46, 0%, 10%);
   --color-satin-linen-950: hsl(46, 0%, 5%);
 
-  --color-bipolar-0: hsl(0, 0%, 100%);
-  --color-bipolar-50: hsl(46, 47%, 97%);
-  --color-bipolar-100: hsl(46, 41%, 94%);
-  --color-bipolar-150: hsl(46, 36%, 92%);
-  --color-bipolar-200: hsl(46, 36%, 90%);
-  --color-bipolar-300: hsl(46, 30%, 85%);
-  --color-bipolar-400: hsl(46, 25%, 80%);
-  --color-bipolar-500: hsl(46, 22%, 75%);
-  --color-bipolar-600: hsl(0, 0%, 20%);
-  --color-bipolar-700: hsl(0, 0%, 15%);
-  --color-bipolar-800: hsl(0, 0%, 15%);
-  --color-bipolar-900: hsl(0, 0%, 10%);
-  --color-bipolar-950: hsl(0, 0%, 5%);
-  --color-bipolar-1000: hsl(0, 0%, 0%);
-
   /* --color-merino-50: #faf8f2;
   --color-merino-100: #f6f3e9;
   --color-merino-200: #e6dcc2;
@@ -124,6 +109,21 @@
 }
 
 :root {
+  --color-block-0: hsl(0, 0%, 100%);
+  --color-block-50: hsl(46, 47%, 97%);
+  --color-block-100: hsl(46, 41%, 94%);
+  --color-block-150: hsl(46, 36%, 92%);
+  --color-block-200: hsl(46, 36%, 90%);
+  --color-block-300: hsl(46, 30%, 85%);
+  --color-block-400: hsl(46, 25%, 80%);
+  --color-block-500: hsl(46, 22%, 75%);
+  --color-block-600: hsl(46, 22%, 75%);
+  --color-block-700: hsl(46, 22%, 70%);
+  --color-block-800: hsl(46, 22%, 65%);
+  --color-block-900: hsl(46, 22%, 60%);
+  --color-block-950: hsl(46, 22%, 55%);
+  --color-block-1000: hsl(46, 22%, 30%);
+
   --ui-primary: var(--ui-color-primary-800);
   --ui-bg: var(--ui-color-neutral-100);
   --ui-bg-muted: var(--ui-color-neutral-200);
@@ -133,13 +133,17 @@
   --ui-al-good: var(--ui-color-al-good-800);
   --ui-al-evil: var(--ui-color-al-evil-800);
   --ui-al-neutral: var(--ui-color-al-neutral-800);
+  --ui-block: var(--ui-color-block-1000);
   --ui-bg-al-good: var(--ui-color-al-good-50);
   --ui-bg-al-evil: var(--ui-color-al-evil-50);
   --ui-bg-al-neutral: var(--ui-color-al-neutral-50);
+  --ui-bg-block: var(--ui-color-block-150);
   --ui-text-primary: var(--ui-color-primary-900);
   --ui-text-al-good: var(--ui-color-al-good-900);
   --ui-text-al-evil: var(--ui-color-al-evil-900);
   --ui-text-al-neutral: var(--ui-color-al-neutral-900);
+  --ui-text-block: var(--ui-color-block-1000);
+  --ui-border-block: var(--ui-color-block-500);
 
   --ui-text-dimmed: var(--color-zinc-400);
   --ui-text-muted: var(--color-zinc-500);
@@ -150,6 +154,21 @@
 }
 
 .dark {
+  --color-block-0: hsl(0, 0%, 0%);
+  --color-block-50: hsl(0, 0%, 5%);
+  --color-block-100: hsl(0, 0%, 10%);
+  --color-block-150: hsl(0, 0%, 15%);
+  --color-block-200: hsl(0, 0%, 15%);
+  --color-block-300: hsl(0, 0%, 20%);
+  --color-block-400: hsl(0, 0%, 25%);
+  --color-block-500: hsl(0, 0%, 30%);
+  --color-block-600: hsl(0, 0%, 35%);
+  --color-block-700: hsl(0, 0%, 40%);
+  --color-block-800: hsl(0, 0%, 45%);
+  --color-block-900: hsl(0, 0%, 50%);
+  --color-block-950: hsl(0, 0%, 55%);
+  --color-block-1000: hsl(0, 0%, 70%);
+
   --ui-primary: var(--ui-color-primary-400);
   --ui-bg: var(--ui-color-neutral-900);
   --ui-bg-muted: var(--ui-color-neutral-800);
@@ -159,12 +178,16 @@
   --ui-al-good: var(--ui-color-al-good-300);
   --ui-al-evil: var(--ui-color-al-evil-300);
   --ui-al-neutral: var(--ui-color-al-neutral-300);
+  --ui-block: var(--ui-color-block-1000);
   --ui-bg-al-good: var(--ui-color-al-good-950);
   --ui-bg-al-evil: var(--ui-color-al-evil-950);
   --ui-bg-al-neutral: var(--ui-color-al-neutral-950);
+  --ui-bg-block: var(--ui-color-block-150);
   --ui-text-al-good: var(--ui-color-al-good-300);
   --ui-text-al-evil: var(--ui-color-al-evil-300);
   --ui-text-al-neutral: var(--ui-color-al-neutral-300);
+  --ui-text-block: var(--ui-color-block-1000);
+  --ui-border-block: var(--ui-color-block-500);
 
   --ui-text-dimmed: var(--color-zinc-500);
   --ui-text-muted: var(--color-zinc-400);

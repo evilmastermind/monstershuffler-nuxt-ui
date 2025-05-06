@@ -5,6 +5,7 @@
         <template v-for="(npc, index) in session" :key="`${index}${npc.id}`">
           <Transition name="fade-scroll-slow" appear>
             <MonsterCard
+              class="font-[ScalaSansOffc]"
               :generator-character="{
                 key: 1,
                 id: npc.id,

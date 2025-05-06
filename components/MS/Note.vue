@@ -1,5 +1,5 @@
 <template>
-  <div class="sheet background bg-muted" :class="background">
+  <div class="background bg-default">
     <slot />
   </div>
 </template>

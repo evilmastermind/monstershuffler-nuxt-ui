@@ -31,6 +31,11 @@ const items = [
       icon: "i-xxx-editor",
       to: localePath({ name: "monsters-editors" }),
     },
+    {
+      label: t("navbar.menu.communityCreations"),
+      icon: "i-xxx-monster",
+      to: localePath({ name: "monsters-community-creations" }),
+    },
   ],
   [
     {

@@ -61,6 +61,7 @@ export default defineNuxtConfig({
         "al-good",
         "al-neutral",
         "al-evil",
+        "block",
         "info",
         "success",
         "warning",

@@ -21,12 +21,17 @@
             :name="$t('navbar.menu.editors')"
             route="monsters-editors"
           />
+          <NavBarLink
+            class="hidden md:block"
+            :name="$t('navbar.menu.communityCreations')"
+            route="monsters-community-creations"
+          />
         </div>
         <div class="flex items-center gap-4">
           <NavBarSocialLinks class="hidden md:inline-flex" />
 
-          <NavBarUser />
           <NavBarSettings />
+          <NavBarUser />
           <NavBarBurger class="inline-flex md:hidden" />
         </div>
       </div>

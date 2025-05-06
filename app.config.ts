@@ -6,6 +6,7 @@ export default defineAppConfig({
       "al-good": "al-good",
       "al-neutral": "al-neutral",
       "al-evil": "al-evil",
+      block: "block",
     },
     modal: {
       slots: {

@@ -42,7 +42,7 @@
       :generator-character="
         characters[currentCharacterBitIndex] as GeneratorCharacter
       "
-      class="absolute top-full z-[9990] mt-1 drop-shadow-2xl"
+      class="absolute top-full z-[9990] mt-1 drop-shadow-2xl font-[ScalaSansOffc]"
       :style="{ top: `100%`, left: `${left}px`, width: `${width}px` }"
     />
   </UContainer>

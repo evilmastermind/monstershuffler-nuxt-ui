@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative shadow-lg rounded-lg border-4 border-double border-accented bg-elevated p-4"
+    class="relative shadow-lg rounded-lg border-4 border-double border-(--ui-border-block) bg-(--ui-bg-block) p-4"
   >
     <div :key="wrapper.key" class="relative stat-block font-[ScalaSansOffc]">
       <StatBlock55eHeader />

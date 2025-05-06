@@ -1,5 +1,5 @@
 <template>
-  <MSNote class="shadow">
+  <MSNote class="overflow-hidden">
     <component
       :is="layout"
       v-show="isLoaded"

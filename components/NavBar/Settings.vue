@@ -1,7 +1,7 @@
 <template>
   <UPopover v-model:open="open" :items>
     <MSIconButton
-      icon="i-xxx-cog"
+      icon="i-xxx-colors"
       :label="$t('navbar.menu.settings')"
       size="lg"
     />
