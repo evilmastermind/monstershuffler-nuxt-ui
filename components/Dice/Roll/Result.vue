@@ -5,7 +5,7 @@
       p.roll.totalResult < 100 ? 'text-[2em]' : 'text-[1.5em]',
       roll?.d20Roll === 20 ? 'rainbow' : '',
       roll?.d20Roll === 1 ? 'poop' : '',
-      currentThemeType === 'light' ? 'light-shadow' : 'dark-shadow',
+      isDark ? 'dark-shadow' : 'light-shadow',
     ]"
   >
     {{ roll.totalResult }}
@@ -17,7 +17,7 @@ import type { DiceRoll } from "@/types";
 
 const ui = useUiStore();
 
-const { currentThemeType } = storeToRefs(ui);
+const { isDark } = storeToRefs(ui);
 
 const p = defineProps({
   roll: {

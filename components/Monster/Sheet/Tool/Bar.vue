@@ -56,7 +56,7 @@
         />
       </MonsterSheetToolGroup>
     </div>
-    <LazyMonsterLayoutEditor v-model="isLayoutEditorOpen" />
+    <LazyMonsterLayoutEditor v-model:open="isLayoutEditorOpen" />
     <LazyMonsterSheetToolExportModal
       v-model="isStatBlockExportModalOpen"
       :stat-block-export="statBlockExport"

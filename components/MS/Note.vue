@@ -8,11 +8,10 @@
 const ui = useUiStore();
 
 const background = computed(() => {
-  switch (ui.currentThemeType) {
-    case "light":
-      return "background-light";
-    case "dark":
-      return "background-dark";
+  if (ui.isDark) {
+    return "background-dark";
+  } else {
+    return "background-light";
   }
 });
 </script>

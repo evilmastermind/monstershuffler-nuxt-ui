@@ -7,7 +7,7 @@
       >
         <UCard>
           <MSIconButton
-            class="absolute top-0 right-0 p-2 text-text-2 transition-colors duration-200 ease-in-out"
+            class="absolute top-0 right-0 p-2 text-muted transition-colors duration-200 ease-in-out"
             :label="$t('closeLabel')"
             icon="fa6-solid:xmark"
             @click="emit('close')"

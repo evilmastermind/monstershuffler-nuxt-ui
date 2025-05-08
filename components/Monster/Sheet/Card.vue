@@ -26,29 +26,28 @@ const { currentRoleplayStatsHTMLElement } = storeToRefs(generator);
 const container = ref<HTMLElement | null>(null);
 
 const borders = computed(() => {
-  switch (ui.currentThemeType) {
-    case "light":
-      return {
-        top: "border-top-light",
-        topAngleLeft: "border-top-angle-left-light",
-        topCenter: "border-top-center-light",
-        topAngleRight: "border-top-angle-right-light",
-        bottom: "border-bottom-light",
-        bottomAngleLeft: "border-bottom-angle-left-light",
-        bottomCenter: "border-bottom-center-light",
-        bottomAngleRight: "border-bottom-angle-right-light",
-      };
-    case "dark":
-      return {
-        top: "border-top-dark",
-        topAngleLeft: "border-top-angle-left-dark",
-        topCenter: "border-top-center-dark",
-        topAngleRight: "border-top-angle-right-dark",
-        bottom: "border-bottom-dark",
-        bottomAngleLeft: "border-bottom-angle-left-dark",
-        bottomCenter: "border-bottom-center-dark",
-        bottomAngleRight: "border-bottom-angle-right-dark",
-      };
+  if (ui.isDark) {
+    return {
+      top: "border-top-dark",
+      topAngleLeft: "border-top-angle-left-dark",
+      topCenter: "border-top-center-dark",
+      topAngleRight: "border-top-angle-right-dark",
+      bottom: "border-bottom-dark",
+      bottomAngleLeft: "border-bottom-angle-left-dark",
+      bottomCenter: "border-bottom-center-dark",
+      bottomAngleRight: "border-bottom-angle-right-dark",
+    };
+  } else {
+    return {
+      top: "border-top-light",
+      topAngleLeft: "border-top-angle-left-light",
+      topCenter: "border-top-center-light",
+      topAngleRight: "border-top-angle-right-light",
+      bottom: "border-bottom-light",
+      bottomAngleLeft: "border-bottom-angle-left-light",
+      bottomCenter: "border-bottom-center-light",
+      bottomAngleRight: "border-bottom-angle-right-light",
+    };
   }
 });
 

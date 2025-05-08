@@ -2,7 +2,7 @@
   <div>
     <div class="abilities-grid gap-x-[5%]">
       <p v-for="number in 3" :key="number">
-        <span class="ability-grid text-[11px] leading-none text-text-2">
+        <span class="ability-grid text-[11px] leading-none text-muted">
           <span></span>
           <span></span>
           <span>MOD</span>
@@ -10,7 +10,7 @@
         </span>
       </p>
     </div>
-    <div class="abilities-grid border-t-background-0 border-t gap-x-[5%]">
+    <div class="abilities-grid border-t-muted border-t gap-x-[5%]">
       <p v-for="(ability, name) in abilities1" :key="name">
         <span class="ability-grid" :class="moral">
           <span
@@ -31,7 +31,7 @@
         </span>
       </p>
     </div>
-    <div class="abilities-grid border-y-background-0 border-y gap-x-[5%]">
+    <div class="abilities-grid border-y-muted border-y gap-x-[5%]">
       <p v-for="(ability, name) in abilities2" :key="name">
         <span class="ability-grid" :class="moral">
           <span
@@ -64,7 +64,11 @@ const ui = useUiStore();
 const statistics = inject("statistics") as ComputedRef<Statistics>;
 const moral = inject("moral") as string;
 
-const { currentThemeType } = storeToRefs(ui);
+const { isDark } = storeToRefs(ui);
+
+const currentThemeType = computed(() => {
+  return isDark.value ? "dark" : "light";
+});
 
 const abilities1 = computed(() => ({
   STR: statistics.value.abilities.STR,

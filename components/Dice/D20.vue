@@ -24,8 +24,6 @@
 <script setup lang="ts">
 const ui = useUiStore();
 
-const { currentThemeType } = storeToRefs(ui);
-
 const p = defineProps({
   size: {
     type: Number,

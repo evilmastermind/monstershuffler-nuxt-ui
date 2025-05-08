@@ -1,7 +1,7 @@
 <template>
   <p class="my-0 leading-[1.5em]">
-    <em class="title" :class="moral">
-      <slot name="bold non-italic" />
+    <em class="font-bold not-italic" :class="moral">
+      <slot name="title" />
     </em>
     <span>&nbsp;</span>
     <slot />

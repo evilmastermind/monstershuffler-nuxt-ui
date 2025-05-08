@@ -16,11 +16,11 @@ export function useProvideCharacter(
     const alignment =
       generatorCharacter.value.object?.statistics?.alignment?.string || "";
     if (alignment.includes("Good")) {
-      return "text-al-good fill-(--ui-al-good) border-(--ui-al-good) decoration-(--ui-al-good)";
+      return "text-al-good fill-(--ui-al-good) border-(--ui-al-good)/70 decoration-(--ui-al-good)";
     } else if (alignment.includes("Evil")) {
-      return "text-al-evil fill-(--ui-al-evil) border--(--ui-al-evil) decoration-(--ui-al-evil)";
+      return "text-al-evil fill-(--ui-al-evil) border--(--ui-al-evil)/70 decoration-(--ui-al-evil)";
     } else {
-      return "text-al-neutral fill-(--ui-al-neutral) border-(--ui-al-neutral) decoration-(--ui-al-neutral)";
+      return "text-al-neutral fill-(--ui-al-neutral) border-(--ui-al-neutral)/70 decoration-(--ui-al-neutral)";
     }
   });
 
@@ -28,11 +28,11 @@ export function useProvideCharacter(
     const alignment =
       generatorCharacter.value.object?.statistics?.alignment?.string || "";
     if (alignment.includes("Good")) {
-      return "decoration-text-good/30";
+      return "decoration-al-good/30";
     } else if (alignment.includes("Evil")) {
-      return "decoration-text-evil/30";
+      return "decoration-al-evil/30";
     } else {
-      return "decoration-text-neutral/30";
+      return "decoration-al-neutral/30";
     }
   });
 

@@ -55,19 +55,18 @@ const wordsCount = inject("wordsCount") as Ref<number>;
 const wrapper = inject("wrapper") as Ref<GeneratorCharacter>;
 
 const imageClasses = computed(() => {
-  switch (ui.currentThemeType) {
-    case "light":
-      return {
-        border: "border-light",
-        paper: "stat-block-light",
-        gradient: "gradient-light",
-      };
-    case "dark":
-      return {
-        border: "border-dark",
-        paper: "stat-block-dark",
-        gradient: "gradient-dark",
-      };
+  if (ui.isDark) {
+    return {
+      border: "border-dark",
+      paper: "stat-block-dark",
+      gradient: "gradient-dark",
+    };
+  } else {
+    return {
+      border: "border-light",
+      paper: "stat-block-light",
+      gradient: "gradient-light",
+    };
   }
 });
 </script>

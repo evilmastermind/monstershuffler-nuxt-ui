@@ -10,6 +10,7 @@
         :description="$t('editor.layout.warningMobileDescription')"
         close
         @close="closeAlert"
+        @update:open="isMobileAlertOpen = false"
       />
       <TH4 class="mt-4">
         {{ $t("editor.layout.dynamic") }}
@@ -125,7 +126,7 @@
       />
     </template>
     <template #footer>
-      <UButton color="neutral" :label="$t('close')" @click="open === false" />
+      <UButton color="neutral" :label="$t('close')" @click="open = false" />
     </template>
   </UModal>
 </template>

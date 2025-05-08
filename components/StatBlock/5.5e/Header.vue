@@ -8,7 +8,7 @@
     >
       {{ statistics?.fullName || "Creature Name" }}
     </div>
-    <div v-if="statistics?.meta?.string" class="italic text-text-2 pt-1">
+    <div v-if="statistics?.meta?.string" class="italic text-muted pt-1">
       {{ statistics.meta.string }}
     </div>
   </div>
