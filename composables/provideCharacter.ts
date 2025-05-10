@@ -16,11 +16,11 @@ export function useProvideCharacter(
     const alignment =
       generatorCharacter.value.object?.statistics?.alignment?.string || "";
     if (alignment.includes("Good")) {
-      return "text-al-good fill-(--ui-al-good) border-(--ui-al-good)/70 decoration-(--ui-al-good)";
+      return "text-(--ui-text-al-good) fill-(--ui-al-good) border-(--ui-al-good)/70 decoration-(--ui-al-good)";
     } else if (alignment.includes("Evil")) {
-      return "text-al-evil fill-(--ui-al-evil) border--(--ui-al-evil)/70 decoration-(--ui-al-evil)";
+      return "text-(--ui-text-al-evil) fill-(--ui-al-evil) border--(--ui-al-evil)/70 decoration-(--ui-al-evil)";
     } else {
-      return "text-al-neutral fill-(--ui-al-neutral) border-(--ui-al-neutral)/70 decoration-(--ui-al-neutral)";
+      return "text-(--ui-text-al-neutral) fill-(--ui-al-neutral) border-(--ui-al-neutral)/70 decoration-(--ui-al-neutral)";
     }
   });
 
@@ -28,11 +28,11 @@ export function useProvideCharacter(
     const alignment =
       generatorCharacter.value.object?.statistics?.alignment?.string || "";
     if (alignment.includes("Good")) {
-      return "decoration-al-good/30";
+      return "underline decoration-wavy decoration-[1px] decoration-skip-ink decoration-al-good/20";
     } else if (alignment.includes("Evil")) {
-      return "decoration-al-evil/30";
+      return "underline decoration-wavy decoration-[1px] decoration-skip-ink decoration-al-evil/20";
     } else {
-      return "decoration-al-neutral/30";
+      return "underline decoration-wavy decoration-[1px] decoration-skip-ink decoration-al-neutral/20";
     }
   });
 
@@ -40,11 +40,11 @@ export function useProvideCharacter(
     const alignment =
       generatorCharacter.value.object?.statistics?.alignment?.string || "";
     if (alignment.includes("Good")) {
-      return "bg-card-good";
+      return "bg-(--ui-bg-al-good)";
     } else if (alignment.includes("Evil")) {
-      return "bg-card-evil";
+      return "bg-(--ui-bg-al-evil)";
     } else {
-      return "bg-card-neutral";
+      return "bg-(--ui-bg-al-neutral)";
     }
   });
 

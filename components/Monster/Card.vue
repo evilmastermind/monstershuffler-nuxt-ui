@@ -1,6 +1,6 @@
 <template>
   <div
-    class="rounded-md bg-default ring ring-accented hover:shadow hover:ring-primary/30 divide-y divide-default p-6"
+    class="rounded-md bg-muted ring ring-accented hover:shadow hover:ring-primary/30 divide-y divide-default p-6"
   >
     <div class="relative h-full" :class="selectable ? 'selectable' : ''">
       <div class="absolute flex gap-1 top-[-1rem] right-[-1rem]">

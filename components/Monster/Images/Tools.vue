@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative flex flex-row justify-evenly items-center text-(--ui-bg) bg-inverted gap-4 sm:rounded-lg sm:line-clamp-none"
+    class="flex justify-evenly items-center overflow-hidden rounded-full gap-1 px-1 text-(--ui-bg) bg-inverted/70"
     @touchstart="handleTouch"
     @touchmove="handleTouch"
     @touchend="handleTouch"

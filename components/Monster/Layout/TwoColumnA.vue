@@ -1,7 +1,7 @@
 <template>
   <div>
     <slot name="images" :rules />
-    <div class="px-4 pb-4 sm:px-6 sm:pb-6">
+    <div class="px-4 pb-4 sm:px-[6%] sm:pb-[6%]">
       <div class="columns-1 md:columns-2 md:gap-8">
         <div class="story">
           <slot name="backstory" />

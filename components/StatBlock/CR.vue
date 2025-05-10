@@ -3,7 +3,7 @@
     <button
       @click="callLowerCR"
       :aria-label="$t('statBlock.lowerCR')"
-      class="inline border-r-[10px] border-r-danger border-t-[7px] border-t-transparent border-b-[7px] border-b-transparent mx-[5px] -translate-y-[0.3em] transform hide-from-exports"
+      class="inline cursor-pointer border-r-[10px] border-r-al-evil-700 border-t-[7px] border-t-transparent border-b-[7px] border-b-transparent mx-[5px] -translate-y-[0.3em] transform hide-from-exports"
     />
     <label>
       <span class="sr-only">{{ $t("statBlock.setCR") }}</span>
@@ -21,7 +21,7 @@
     <button
       @click="callRaiseCR"
       :aria-label="$t('statBlock.raiseCR')"
-      class="inline border-l-[10px] border-l-danger border-t-[7px] border-t-transparent border-b-[7px] border-b-transparent mx-[5px] -translate-y-[0.3em] transform hide-from-exports"
+      class="inline cursor-pointer border-l-[10px] border-l-al-evil-700 border-t-[7px] border-t-transparent border-b-[7px] border-b-transparent mx-[5px] -translate-y-[0.3em] transform hide-from-exports"
     />
   </span>
 </template>

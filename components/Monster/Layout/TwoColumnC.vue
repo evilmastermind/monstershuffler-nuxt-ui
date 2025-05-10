@@ -19,7 +19,7 @@
         </div>
       </div>
     </div>
-    <div class="px-4 pb-6 sm:px-6 sm:pb-7 md:pl-6 md:pr-6 md:pb-6 mt-6">
+    <div class="px-4 pb-6 sm:px-6 sm:pb-7 md:px-[6%] md:pb-[6%] mt-6">
       <slot name="stats" :columns="2" />
     </div>
   </div>

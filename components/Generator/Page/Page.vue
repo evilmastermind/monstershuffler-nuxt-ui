@@ -25,6 +25,7 @@
               <GeneratorForm />
               <UButton
                 block
+                color="primary"
                 class="mt-5"
                 :label="$t('generator.form.generate')"
                 trailing-icon="i-xxx-random"

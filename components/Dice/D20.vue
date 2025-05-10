@@ -10,7 +10,7 @@
   >
     <path
       d="M414.5 6L6 210.5L24 677.5L414.5 910.5L806.5 677.5L824.5 210.5L414.5 6Z"
-      class="fill-(--ui-bg) stroke-(--ui-text)"
+      class="fill-(--ui-text-inverted) stroke-(--ui-text-muted)"
       :stroke-width="stroke * 10"
     />
     <path

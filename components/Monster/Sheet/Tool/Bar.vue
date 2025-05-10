@@ -11,7 +11,7 @@
         <MSIconButton
           :label="$t('monsterSheet.editImages')"
           icon="i-xxx-image"
-          @click="openImageEditor"
+          @click="toggleImageEditor"
         />
         <MonsterSheetToolBackstoryHelp />
         <MSIconButton
@@ -58,7 +58,7 @@
     </div>
     <LazyMonsterLayoutEditor v-model:open="isLayoutEditorOpen" />
     <LazyMonsterSheetToolExportModal
-      v-model="isStatBlockExportModalOpen"
+      v-model:open="isStatBlockExportModalOpen"
       :stat-block-export="statBlockExport"
     />
     <GeneratorShareModal
@@ -135,9 +135,9 @@ function openLayoutEditor() {
   isLayoutEditorOpen.value = true;
 }
 
-function openImageEditor() {
+function toggleImageEditor() {
   isLayoutEditorOpen.value = false;
-  isImageEditorOpen.value = true;
+  isImageEditorOpen.value = !isImageEditorOpen.value;
 }
 
 function closeMonster() {
@@ -258,10 +258,12 @@ const exportOptions = computed(() => {
       {
         label: t("monsterSheet.exportRoleplayStats"),
         icon: "i-xxx-roleplay",
-        onSelect: setStatBlockExport(
-          "Roleplay Stats",
-          exportRoleplayStats(generatorCharacter.value.object),
-        ),
+        onSelect() {
+          setStatBlockExport(
+            "Roleplay Stats",
+            exportRoleplayStats(generatorCharacter.value.object),
+          );
+        },
       },
     ],
   ];
@@ -285,6 +287,7 @@ async function setStatBlockExportAsync(
 }
 
 watch(statBlockExport, () => {
+  console.log(statBlockExport.value);
   isStatBlockExportModalOpen.value = true;
 });
 </script>

@@ -16,7 +16,7 @@
         <div
           v-show="isLoaded"
           ref="sheet"
-          class="overflow-hidden border border-accented sm:rounded-lg mt-0 sm:mt-2"
+          class="overflow-hidden border border-accented bg-block-50 sm:rounded-lg mt-0 sm:mt-2"
         >
           <LazyMonsterSheet
             :key="currentCharacterIndex"

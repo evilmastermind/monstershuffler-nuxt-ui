@@ -6,7 +6,7 @@
         <slot />
       </main>
     </div>
-    <MSFooter />
+    <MSFooter class="mt-12" />
   </div>
 </template>
 

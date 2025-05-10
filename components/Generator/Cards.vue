@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="flex flex-col-reverse gap-6 mt-2">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+    <div class="flex flex-col-reverse items-center gap-6 mt-2">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 max-w-4xl">
         <template v-for="(npc, index) in session" :key="`${index}${npc.id}`">
           <Transition name="fade-scroll-slow" appear>
             <MonsterCard

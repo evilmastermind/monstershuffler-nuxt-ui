@@ -16,7 +16,7 @@
         v-if="
           hooks?.length && wrapper.hook === undefined && !isLoadingGeneration
         "
-        class="p-4 border border-accented rounded w-fit break-inside-avoid mt-6"
+        class="w-fit break-inside-avoid my-4"
       >
         <p class="font-[LibreBaskerville]">
           Generate a mini-adventure based on:
@@ -25,7 +25,8 @@
           <UButton
             v-for="(hook, index) in hooks"
             :key="index"
-            variant="outline"
+            variant="soft"
+            size="xs"
             color="neutral"
             :loading="isLoadingGeneration"
             :disabled="isLoadingGeneration"
@@ -36,7 +37,7 @@
         </div>
       </div>
 
-      <Transition name="fade">
+      <!-- <Transition name="fade">
         <div
           v-if="
             backstory &&
@@ -46,10 +47,12 @@
           "
           class="hide-from-exports"
         >
-          <h3 class="content mt-6">
+          <TH4 class="mt-6">
             {{ $t("generator.backstory.ratingQuestion") }}
-          </h3>
-          <div class="flex justify-between items-center max-w-[500px] gap-4">
+          </TH4>
+          <div
+            class="flex justify-between items-center max-w-[500px] gap-4 mt-2"
+          >
             <MSStarRating
               v-model="initialRating"
               :size="2"
@@ -58,29 +61,28 @@
                   generator.setCurrentNPCRatingThrottle(rating, user.sessionId)
               "
             />
-            <button
+            <UButton
               @click="share?.toggle()"
-              class="block whitespace-nowrap cursor-pointer transition-colors duration-200 py-1 px-4 border-2 border-solid border-text-neutral rounded-lg"
+              color="neutral"
+              variant="ghost"
+              icon="i-xxx-share"
+              :label="$t('share.action')"
             >
-              <Icon class="text-text-icon mr-2" name="solar:share-bold" />
-              <span class="text-sm underline decoration-text-2">
-                {{ $t("share.action") }}
-              </span>
-            </button>
+            </UButton>
           </div>
         </div>
-      </Transition>
+      </Transition> -->
 
-      <MSAlert
+      <!-- <MSAlert
         v-if="tooManyRequests"
         type="danger"
         @close="tooManyRequests = false"
       >
         <p>{{ $t("error.tooManyRequests") }}</p>
-      </MSAlert>
+      </MSAlert> -->
     </div>
 
-    <MonsterShareModal ref="share" :generator-character="wrapper" />
+    <!-- <MonsterShareModal ref="share" :generator-character="wrapper" /> -->
   </div>
 </template>
 
@@ -105,7 +107,6 @@ const hooks = character.value.character?.characterHooks;
 const backstory = ref<string | undefined>(
   character.value?.character?.user?.backstory?.string as string,
 );
-const tooManyRequests = ref(false);
 const isLoadingGeneration = ref(false);
 
 const initialRating = ref<number>(0);

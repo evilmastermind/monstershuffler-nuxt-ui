@@ -20,7 +20,7 @@
         </template>
       </UInput>
       <UButton
-        color="neutral"
+        color="primary"
         variant="subtle"
         size="sm"
         :loading="isLoading"

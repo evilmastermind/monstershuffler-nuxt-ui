@@ -2,7 +2,7 @@
   <div
     ref="editorRef"
     contenteditable
-    :class="['text-text font-[LibreBaskerville]', isFocused ? '' : '']"
+    class="text-default font-[LibreBaskerville] focus:outline-none"
     @focus="isFocused = true"
     @blur="isFocused = false"
   ></div>
@@ -29,12 +29,12 @@ const updateKeyThrottle = throttle(() => key.value++, 500);
 const lexicalTheme = reactive({
   ltr: "ltr",
   rtl: "rtl",
-  paragraph: "mt-2 mb-4 leading-7",
+  paragraph: "mt-1 mb-4 leading-6",
   quote: "mt-6 mb-4 italic text-center",
   heading: {
-    h1: `mt-6 mb-4 text-4xl leading-none tracking-wide font-medium font-[MrsEavesSmallCaps]  ${moral.value || ""}`,
-    h2: `mt-6 mb-4 text-3xl leading-tight tracking-[0.02em] font-[MrsEavesSmallCaps]  ${moral.value || ""}`,
-    h3: `mt-5 mb-2 text-2xl leading-tight tracking-[0.05em] font-[MrsEavesSmallCaps] underline underline-offset-2 decoration-[1.5px]  ${moral.value || ""}`,
+    h1: `mt-6 mb-4 text-5xl leading-none tracking-wide font-medium font-[MrsEavesSmallCaps]  ${moral.value || ""}`,
+    h2: `mt-6 text-4xl leading-none tracking-[0.02em] font-[MrsEavesSmallCaps]  ${moral.value || ""}`,
+    h3: `mt-5 text-3xl leading-[0.9] tracking-[0.05em] font-[MrsEavesSmallCaps] border-b-3 border-al-neutral-400 underline-offset-2 decoration-[1.5px]  ${moral.value || ""}`,
     h4: `mt-4 mb-2 text-lg leading-tight font-[MrsEavesSmallCaps]  ${moral.value || ""}`,
     h5: `mt-3 mb-2 text-base leading-tight font-[MrsEavesSmallCaps]  ${moral.value || ""}`,
     h6: `mt-2 mb-2 text-sm leading-tight font-[MrsEavesSmallCaps] text-text-evil  ${moral.value || ""}`,
@@ -55,7 +55,7 @@ const lexicalTheme = reactive({
     underline: "underline",
     strikethrough: "line-through",
     code: "font-mono bg-muted p-1 rounded",
-    highlight: "bg-primary-200",
+    highlight: "bg(--ui-bg-al-neutral)",
     subscript: "align-sub",
     superscript: "align-super",
   },

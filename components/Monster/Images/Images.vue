@@ -21,7 +21,7 @@
     >
       <MonsterImagesTools
         :image
-        class="absolute top-2 right-2 z-110"
+        class="absolute top-1 right-1 w-min z-110"
         @enlarge="enlargeImage"
         @reduce="reduceImage"
       />
@@ -48,6 +48,8 @@
           width: `${token.widthPx}px`,
           height: `${token.widthPx}px`,
         }"
+        @mousedown.stop="startMoveTokenXY"
+        @touchstart.stop="startMoveTokenXY"
       >
         <div
           class="relative w-full h-full rounded-full border-2 border-primary shadow-[0_0_40px_2px_rgba(0,0,0,1)] cursor-move z-101"

@@ -10,7 +10,9 @@
         </span>
       </p>
     </div>
-    <div class="abilities-grid border-t-muted border-t gap-x-[5%]">
+    <div
+      class="abilities-grid border-t-(--ui-text-inverted) border-t gap-x-[5%]"
+    >
       <p v-for="(ability, name) in abilities1" :key="name">
         <span class="ability-grid" :class="moral">
           <span
@@ -31,7 +33,9 @@
         </span>
       </p>
     </div>
-    <div class="abilities-grid border-y-muted border-y gap-x-[5%]">
+    <div
+      class="abilities-grid border-y-(--ui-text-inverted) border-y gap-x-[5%]"
+    >
       <p v-for="(ability, name) in abilities2" :key="name">
         <span class="ability-grid" :class="moral">
           <span

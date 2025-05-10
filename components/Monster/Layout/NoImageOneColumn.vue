@@ -1,5 +1,7 @@
 <template>
-  <div class="grid grid-cols-1 gap-8 px-2 sm:px-[6%] md:grid-cols-2">
+  <div
+    class="grid grid-cols-1 gap-8 px-4 py-4 sm:px-[6%] sm:py-[5%] md:grid-cols-2"
+  >
     <div class="story">
       <slot name="backstory" />
     </div>

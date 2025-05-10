@@ -6,7 +6,7 @@
     @keydown.stop="rollDice"
     :class="[
       moralDecoration,
-      'relative inline-block select-none leading-[inherit] underline decoration-wavy decoration-[1px] decoration-skip-ink hover:cursor-pointer',
+      'relative inline-block select-none leading-[inherit] hover:cursor-pointer',
     ]"
   >
     {{ translatedDiceRoll }}

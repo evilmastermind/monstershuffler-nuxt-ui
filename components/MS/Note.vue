@@ -1,5 +1,5 @@
 <template>
-  <div class="background bg-default">
+  <div class="background" :class="background">
     <slot />
   </div>
 </template>
