@@ -34,7 +34,7 @@ const lexicalTheme = reactive({
   heading: {
     h1: `mt-6 mb-4 text-5xl leading-none tracking-wide font-medium font-[MrsEavesSmallCaps]  ${moral.value || ""}`,
     h2: `mt-6 text-4xl leading-none tracking-[0.02em] font-[MrsEavesSmallCaps]  ${moral.value || ""}`,
-    h3: `mt-5 text-3xl leading-[0.9] tracking-[0.05em] font-[MrsEavesSmallCaps] border-b-3 border-al-neutral-400 underline-offset-2 decoration-[1.5px]  ${moral.value || ""}`,
+    h3: `mt-5 text-3xl leading-[0.9] tracking-[0.05em] font-[MrsEavesSmallCaps] border-b-3 border-al-neutral-500 underline-offset-2 decoration-[1.5px]  ${moral.value || ""}`,
     h4: `mt-4 mb-2 text-lg leading-tight font-[MrsEavesSmallCaps]  ${moral.value || ""}`,
     h5: `mt-3 mb-2 text-base leading-tight font-[MrsEavesSmallCaps]  ${moral.value || ""}`,
     h6: `mt-2 mb-2 text-sm leading-tight font-[MrsEavesSmallCaps] text-text-evil  ${moral.value || ""}`,
