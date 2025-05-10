@@ -3,7 +3,7 @@
     <div ref="layout" class="grid grid-cols-1 md:grid-cols-2 md:gap-8">
       <MonsterImages
         :rules="rules"
-        class="image"
+        class="image w-min h-min"
         @load="e('load')"
         @height="setHeight"
       />
@@ -45,8 +45,8 @@ const observer = new ResizeObserver((entries) => {
 });
 
 const rules: ComputedRef<ImageRules> = computed(() => ({
-  width: "full",
-  height: "full",
+  width: "manual",
+  height: "manual",
   maxWidth: width.value,
   mask: "bottom-right",
 }));
