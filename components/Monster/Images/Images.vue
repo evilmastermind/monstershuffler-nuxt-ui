@@ -6,10 +6,6 @@
       isImageEditorOpen ? 'mb-6 z-[9900]' : '',
     ]"
   >
-    <div v-if="isImageEditorOpen">
-      <div class="grid grid-cols-2 gap-8"></div>
-    </div>
-
     <div
       v-if="isImageEditorOpen"
       class="absolute inset-0 border-2 rounded cursor-move border-primary z-100"

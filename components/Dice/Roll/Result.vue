@@ -1,6 +1,6 @@
 <template>
   <div
-    class="result"
+    class="result text-default"
     :class="[
       p.roll.totalResult < 100 ? 'text-[2em]' : 'text-[1.5em]',
       roll?.d20Roll === 20 ? 'rainbow' : '',

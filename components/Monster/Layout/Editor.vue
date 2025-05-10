@@ -74,7 +74,7 @@
           </span>
         </MonsterLayoutExample>
         <MonsterLayoutExample
-          :class="currentLayout === 'MonsterLayoutOneColumnD'"
+          :selected="currentLayout === 'MonsterLayoutOneColumnD'"
           @click="chooseLayout('MonsterLayoutOneColumnD')"
         >
           <MonsterLayoutExample1ColumnD class="example" />
@@ -87,7 +87,8 @@
       <TH4 class="mt-4">{{ $t("editor.layout.2Column") }}</TH4>
       <MonsterLayoutExampleGroup class="mt-4">
         <MonsterLayoutExample
-          :class="currentLayout === 'MonsterLayoutTwoColumnA'"
+          :selected="currentLayout === 'MonsterLayoutTwoColumnA'"
+          @click="chooseLayout('MonsterLayoutTwoColumnA')"
         >
           <MonsterLayoutExample2ColumnA class="example" />
           <span class="sr-only">
@@ -96,7 +97,7 @@
           </span>
         </MonsterLayoutExample>
         <MonsterLayoutExample
-          :class="currentLayout === 'MonsterLayoutTwoColumnB'"
+          :selected="currentLayout === 'MonsterLayoutTwoColumnB'"
           @click="chooseLayout('MonsterLayoutTwoColumnB')"
         >
           <MonsterLayoutExample2ColumnB class="example" />
@@ -106,7 +107,7 @@
           </span>
         </MonsterLayoutExample>
         <MonsterLayoutExample
-          :class="currentLayout === 'MonsterLayoutTwoColumnC'"
+          :selected="currentLayout === 'MonsterLayoutTwoColumnC'"
           @click="chooseLayout('MonsterLayoutTwoColumnC')"
         >
           <MonsterLayoutExample2ColumnC class="example" />

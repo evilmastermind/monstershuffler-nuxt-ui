@@ -1,16 +1,15 @@
 <template>
   <div ref="layout">
     <div class="grid grid-cols-1 gap-8 md:grid-cols-2 pb-4 sm:pb-[6%]">
-      <div class="relative">
+      <div>
         <MonsterImages
           :rules="rules"
-          class="absolute top-0 left-0"
+          class="absolute w-min top-0 left-0"
           @load="e('load')"
           @height="setHeight"
         />
         <div
           class="pl-4 pr-4 pt-[var(--image-height)] sm:pl-[6%] sm:pr-[6%] sm:pt-[6%] md:pl-[12%]"
-          :style="{ paddingTop: `${imageHeight}px` }"
         >
           <slot name="backstory" />
         </div>
