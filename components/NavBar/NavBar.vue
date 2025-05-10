@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full h-[60px] flex items-center border-b border-muted bg-linear-to-b from-(--ui-bg) to-(--ui-bg-muted)/70 backdrop-blur-xs z-20"
+    class="w-full h-[60px] flex items-center border-b border-muted bg-linear-to-b from-(--ui-bg) to-(--ui-bg-muted) backdrop-blur-xs z-20"
   >
     <UContainer>
       <div class="flex justify-between items-center">
@@ -16,7 +16,7 @@
             :name="$t('navbar.menu.npcGenerator')"
             route="monsters-generator"
           />
-          <NavBarLink
+          <!-- <NavBarLink
             class="hidden md:block"
             :name="$t('navbar.menu.editors')"
             route="monsters-editors"
@@ -25,7 +25,7 @@
             class="hidden md:block"
             :name="$t('navbar.menu.communityCreations')"
             route="monsters-community-creations"
-          />
+          /> -->
         </div>
         <div class="flex items-center gap-4">
           <NavBarSocialLinks class="hidden md:inline-flex" />
