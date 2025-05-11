@@ -11,6 +11,9 @@ export default defineContentConfig({
         author: z.string(),
         date: z.string(),
         slug: z.string(),
+        tags: z.array(
+          z.enum(["news", "feature", "update", "announcement", "blog"]),
+        ),
         image: z.string(),
       }),
     }),

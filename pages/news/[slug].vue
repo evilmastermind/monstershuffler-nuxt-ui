@@ -8,7 +8,7 @@
         {{ $t("news.title") }}
       </p>
       <TH1>{{ post.title }}</TH1>
-      <p class="text-sm text-muted tracking-wider w-full mb-4 mt-16 md:mt-20">
+      <p class="text-sm text-muted tracking-wider w-full mb-4 mt-10 md:mt-16">
         {{ post.author }} —
         {{
           new Date(post.date).toLocaleDateString(undefined, {
