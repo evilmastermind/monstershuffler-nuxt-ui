@@ -1,5 +1,5 @@
 <template>
-  <div
+  <MSNote
     class="rounded-md bg-muted ring ring-accented hover:shadow hover:ring-primary/30 divide-y divide-default p-6"
   >
     <div class="relative h-full" :class="selectable ? 'selectable' : ''">
@@ -34,7 +34,7 @@
         <UButton
           block
           v-if="selectable"
-          class="mt-6"
+          class="mt-6 bg-transparent"
           variant="outline"
           color="neutral"
           @click="openCharacterSheet"
@@ -43,7 +43,7 @@
         </UButton>
       </div>
     </div>
-  </div>
+  </MSNote>
 </template>
 
 <script setup lang="ts">

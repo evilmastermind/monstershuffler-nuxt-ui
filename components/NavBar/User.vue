@@ -1,8 +1,13 @@
 <template>
   <div v-if="!token" class="flex gap-2">
-    <UButton text="Login" variant="outline" color="neutral" to="login" />
     <UButton
-      text="Register"
+      :text="$t('navbar.login')"
+      variant="outline"
+      color="neutral"
+      to="login"
+    />
+    <UButton
+      :text="$t('navbar.register')"
       variant="solid"
       color="neutral"
       to="registration"
@@ -23,7 +28,6 @@
       }"
     ></div>
   </NuxtLink>
-  <div></div>
 </template>
 <script setup lang="ts">
 const user = useUserStore();

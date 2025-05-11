@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@nuxtjs/seo",
     "@nuxt/ui",
+    "@nuxt/content",
   ],
   css: ["~/assets/css/main.css"],
   icon: {
@@ -50,6 +51,30 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       apiUrl: process.env.API_URL,
+    },
+  },
+
+  routeRules: {
+    "/": { swr: 600 },
+    "/monsters/generator": { ssr: false },
+    "/monsters/generator/**": { ssr: false },
+    "/blog/**": { swr: 600 },
+    "/editors": { swr: 600 },
+    "/dm-screen": { swr: 600 },
+    "/community-creations": { swr: 600 },
+    "/login": { swr: 600 },
+    "/registration": { swr: 600 },
+    "/user-reactivation": { swr: 600 },
+    "/verify-email": { swr: 600 },
+    "/terms-of-service": { swr: 600 },
+    "/privacy-policy": { swr: 600 },
+    "/reset-password": { swr: 600 },
+    // "/api/**": { proxy:`${process.env.API_URL}/**` },
+    // Don’t cache HTML—always revalidate
+    "/**/*.html": {
+      headers: {
+        "cache-control": "no-cache, no-store, must-revalidate",
+      },
     },
   },
 

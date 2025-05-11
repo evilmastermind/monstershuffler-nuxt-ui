@@ -656,6 +656,9 @@
     "sendFeedback": "Send feedback",
     "thankYou": "Thank you for your help!"
   },
+  "news": {
+    "title": "News"
+  },
   "copyToClipboard": "Copy to clipboard",
   "copied": "Copied!",
   "HTML": "HTML",

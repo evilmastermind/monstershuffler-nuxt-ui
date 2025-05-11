@@ -18,7 +18,6 @@ const background = computed(() => {
 
 <style scoped>
 .background {
-  position: relative;
   overflow: hidden;
 }
 .background-light {
