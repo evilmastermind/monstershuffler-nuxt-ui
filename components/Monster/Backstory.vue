@@ -7,7 +7,7 @@
         :stream-status="wrapper.streamStatus"
         @text-updated="saveBackstory"
       />
-      <LoadingDots
+      <MSLoadingDots
         v-if="
           !wrapper.streamChunks.length && wrapper?.streamStatus === 'opening'
         "

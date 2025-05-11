@@ -1,10 +1,11 @@
 <template>
-  <div>
+  <div class="relative">
     <Transition name="fade-quick" mode="out-in">
-      <!-- <UProgress v-if="isLoading" size="sm" /> -->
-      <div class="relative">
+      <UProgress v-show="isLoading" size="sm" class="absolute top-0 w-full" />
+    </Transition>
+    <Transition name="fade-quick" mode="out-in">
+      <div v-show="!isLoading" class="relative">
         <GeneratorPageBar />
-
         <GeneratorBits v-if="characters.length" class="mt-4" />
         <UContainer>
           <Transition name="fade-quick" appear>

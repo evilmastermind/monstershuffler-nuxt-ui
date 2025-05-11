@@ -4,13 +4,13 @@
       :text="$t('navbar.login')"
       variant="outline"
       color="neutral"
-      to="login"
+      to="/login"
     />
     <UButton
       :text="$t('navbar.register')"
       variant="solid"
       color="neutral"
-      to="registration"
+      to="/registration"
     />
   </div>
   <NuxtLink

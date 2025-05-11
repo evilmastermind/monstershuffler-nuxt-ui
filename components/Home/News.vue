@@ -14,7 +14,7 @@
     <div
       v-for="post in posts"
       :key="post.id"
-      class="noselect min-w-[200px] md:min-w-[250px] cursor-pointer rounded overflow-hidden border border-accented shadow-md hover:shadow-lg mr-4"
+      class="noselect min-w-[200px] md:min-w-[250px] cursor-pointer rounded overflow-hidden border border-accented shadow-md hover:shadow-lg hover:border-primary/30 mr-4"
       @click="() => navigateTo(`/news/${post.slug}`)"
     >
       <div
