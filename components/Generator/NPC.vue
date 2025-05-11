@@ -50,7 +50,6 @@ function close() {
 
 function setIsLoaded() {
   isLoaded.value = true;
-  console.log("loaded");
   e("loaded");
 }
 
@@ -69,6 +68,5 @@ onMounted(() => {
       scrollIfInView: false,
     });
   }
-  console.log("mounted");
 });
 </script>

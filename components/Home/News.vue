@@ -39,10 +39,10 @@
         </div>
       </div>
       <div class="w-full px-4 pt-2 pb-4">
-        <TH4 class="truncate mt-2">
+        <TH4 class="mt-2">
           {{ post.title }}
         </TH4>
-        <p class="text-xs text-muted w-full truncate">
+        <p class="text-xs text-muted w-full truncate mt-1">
           {{ post.description }}
         </p>
       </div>
@@ -52,7 +52,7 @@
 
 <script setup lang="ts">
 const { data: posts } = await useAsyncData(`content`, () => {
-  return queryCollection("news").order("date", "DESC").limit(5).all();
+  return queryCollection("news").order("date", "DESC").limit(15).all();
 });
 
 const scroller = ref<HTMLElement | null>(null);
@@ -91,10 +91,6 @@ function scrollBy(direction: -1 | 1) {
 function goTo(url: string) {
   window.location.href = url;
 }
-
-onMounted(async () => {
-  console.log(await queryCollection("news").first());
-});
 </script>
 
 <style scoped></style>

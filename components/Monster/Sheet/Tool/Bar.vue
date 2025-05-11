@@ -287,7 +287,6 @@ async function setStatBlockExportAsync(
 }
 
 watch(statBlockExport, () => {
-  console.log(statBlockExport.value);
   isStatBlockExportModalOpen.value = true;
 });
 </script>

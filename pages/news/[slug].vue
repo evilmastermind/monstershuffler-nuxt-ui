@@ -36,12 +36,10 @@ const { data: post } = await useAsyncData(`content-${slug}`, () => {
 const items = ref<BreadcrumbItem[]>([
   {
     label: "Home",
-    icon: "i-xxx-home",
     to: "/",
   },
   {
     label: post.value?.title,
-    icon: "i-xxx-stat-block",
   },
 ]);
 </script>
@@ -49,6 +47,12 @@ const items = ref<BreadcrumbItem[]>([
 <style>
 .news p {
   margin-bottom: calc(var(--spacing) * 5);
+}
+.news a {
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--ui-text-muted);
 }
 .news img {
   border-radius: var(--radius-md);
