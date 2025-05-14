@@ -1,7 +1,7 @@
 <template>
   <div class="relative text-center z-10 flex flex-col items-center">
     <Transition name="title" appear>
-      <TH1Rainbow>The NPC Generator</TH1Rainbow>
+      <TH1>The NPC Generator</TH1>
     </Transition>
     <TP class="max-w-2xl mt-6">
       Type a prompt above or use the form to create the NPCs you need. You can

@@ -29,8 +29,8 @@ import { useRoute } from "vue-router";
 
 const slug = useRoute().params.slug;
 
-const { data: post } = await useAsyncData(`content-${slug}`, () => {
-  return queryCollection("news").first();
+const { data: post } = await useAsyncData(`news-${slug}`, () => {
+  return queryCollection("news").path(`/news/${slug}`).first();
 });
 
 const items = ref<BreadcrumbItem[]>([
