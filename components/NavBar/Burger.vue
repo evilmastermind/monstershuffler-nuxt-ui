@@ -26,16 +26,16 @@ const items = [
       icon: "i-xxx-random",
       to: localePath({ name: "monsters-generator" }),
     },
-    {
-      label: t("navbar.menu.editors"),
-      icon: "i-xxx-editor",
-      to: localePath({ name: "monsters-editors" }),
-    },
-    {
-      label: t("navbar.menu.communityCreations"),
-      icon: "i-xxx-monster",
-      to: localePath({ name: "monsters-community-creations" }),
-    },
+    // {
+    //   label: t("navbar.menu.editors"),
+    //   icon: "i-xxx-editor",
+    //   to: localePath({ name: "monsters-editors" }),
+    // },
+    // {
+    //   label: t("navbar.menu.communityCreations"),
+    //   icon: "i-xxx-monster",
+    //   to: localePath({ name: "monsters-community-creations" }),
+    // },
   ],
   [
     {
@@ -48,6 +48,12 @@ const items = [
       icon: "i-xxx-github",
       label: "GitHub",
       to: "https://github.com/evilmastermind/monstershuffler",
+      target: "_blank",
+    },
+    {
+      icon: "i-xxx-patreon",
+      label: "Patreon",
+      to: "https://patreon.com/monstershuffler",
       target: "_blank",
     },
   ],

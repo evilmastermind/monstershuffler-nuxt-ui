@@ -8,17 +8,18 @@
       only use words for the available classes, races, and backgrounds, like
       these examples:
     </TP>
-    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-6">
-      <li
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-6">
+      <UButton
         v-for="example in examples"
         :key="example"
-        class="block whitespace-nowrap cursor-pointer py-1 px-4 border-2 rounded-lg"
-        :class="getColors(example)"
+        block
+        color="neutral"
+        variant="subtle"
         @click="promptFromOtherSources = example"
       >
         {{ example }}
-      </li>
-    </ul>
+      </UButton>
+    </div>
   </div>
 </template>
 

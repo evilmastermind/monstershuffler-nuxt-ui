@@ -24,6 +24,18 @@
         rel="noopener noreferrer"
       />
     </UTooltip>
+    <UTooltip text="Patreon">
+      <UButton
+        to="https://patreon.com/monstershuffler"
+        variant="ghost"
+        color="neutral"
+        size="lg"
+        icon="i-xxx-patreon"
+        target="_blank"
+        square
+        rel="noopener noreferrer"
+      />
+    </UTooltip>
   </div>
 </template>
 

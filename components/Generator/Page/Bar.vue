@@ -49,7 +49,8 @@
           class="generate-button flex justify-start items-center gap-4 md:hidden"
         >
           <UButton
-            color="primary"
+            variant="soft"
+            color="neutral"
             size="sm"
             :label="$t('generator.form.generate')"
             :loading="isButtonLoading"
@@ -65,11 +66,27 @@
         />
 
         <!-- Mode switch -->
-        <div v-if="!isSheetOpen" class="top-bar-options flex justify-end gap-4">
-          <USwitch
+        <div v-if="!isSheetOpen" class="top-bar-options flex justify-end gap-1">
+          <UButton
+            color="neutral"
+            size="sm"
+            :variant="settings.isFormMode === true ? 'soft' : 'outline'"
+            @click="settings.isFormMode = true"
+          >
+            Form
+          </UButton>
+          <UButton
+            color="neutral"
+            :variant="!settings.isFormMode ? 'soft' : 'outline'"
+            size="sm"
+            @click="settings.isFormMode = false"
+          >
+            Prompt
+          </UButton>
+          <!-- <USwitch
             v-model="settings.isFormMode"
             :label="settings.isFormMode ? 'Form' : 'Prompt'"
-          />
+          /> -->
         </div>
       </div>
 

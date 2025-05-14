@@ -27,7 +27,7 @@
             route="monsters-community-creations"
           /> -->
         </div>
-        <div class="flex gap-4">
+        <div class="flex items-center gap-4">
           <NavBarSocialLinks class="hidden md:inline-flex" />
 
           <NavBarSettings />

@@ -18,7 +18,7 @@
           </Transition>
         </UContainer>
         <UContainer v-show="currentCharacterIndex === -1" key="3">
-          <div class="mt-4 md:mt-7">
+          <div class="mt-4 md:mt-8">
             <div
               v-if="settings.isFormMode"
               class="hidden md:block float-left w-[300px] md:mr-6 mb-9"
@@ -26,7 +26,8 @@
               <GeneratorForm />
               <UButton
                 block
-                color="primary"
+                variant="soft"
+                color="neutral"
                 class="mt-5"
                 :label="$t('generator.form.generate')"
                 trailing-icon="i-xxx-random"
@@ -36,8 +37,8 @@
               />
             </div>
             <div class="">
-              <GeneratorPageIntro v-if="isIntroShown" class="pt-12 md:pt-24" />
-              <GeneratorCards v-else />
+              <GeneratorPageIntro v-if="isIntroShown" class="pt-12 md:pt-12" />
+              <GeneratorCards v-else class="pt-4" />
             </div>
           </div>
         </UContainer>

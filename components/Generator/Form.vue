@@ -78,10 +78,12 @@
     </UFormField>
     <div class="flex gap-4 flex-wrap">
       <UCheckbox
+        color="neutral"
         v-model="settings.options.addVoice"
         :label="$t('generator.form.voice')"
       />
       <UCheckbox
+        color="neutral"
         v-model="settings.options.includeBodyType"
         :label="$t('generator.form.includeBodyType')"
       />

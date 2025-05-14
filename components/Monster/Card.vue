@@ -34,7 +34,7 @@
         <UButton
           block
           v-if="selectable"
-          class="mt-6 bg-transparent"
+          class="mt-6"
           variant="outline"
           color="neutral"
           @click="openCharacterSheet"
