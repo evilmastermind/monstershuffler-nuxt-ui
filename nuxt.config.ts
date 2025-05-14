@@ -94,4 +94,30 @@ export default defineNuxtConfig({
       ],
     },
   },
+
+  vite: {
+    vue: {
+      script: {
+        defineModel: true,
+        propsDestructure: true,
+      },
+    },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: "modern-compiler", // or "modern"
+        },
+      },
+    },
+  },
+
+  app: {
+    head: {
+      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+      charset: "utf-8",
+      viewport: "width=device-width, initial-scale=1",
+    },
+  },
+
+  spaLoadingTemplate: "public/spa-loading-template.html",
 });
